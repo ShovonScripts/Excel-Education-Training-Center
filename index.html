@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel Education | Japanese Language Training & Japan Visa Guidance</title>
+  <meta name="description" content="Excel Education & Training Center - Premier Japanese language institute in Dhaka offering intensive N5/N4 courses with Japan student visa guidance. Offline classroom training only." />
+  <meta name="theme-color" content="#166534" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Excel Education Announcement">
+    <a href="contact.html" title="Start Your Japanese Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Excel Education Home">
+        <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html" data-en="Courses" data-ja="コース">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-japan.html" data-en="Why Japan" data-ja="日本について">Why Japan</a></li>
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Our Process" data-ja="プロセス">Our Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html" data-en="Success Stories" data-ja="成功事例">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="contact.html" class="nav-highlight" data-en="Enroll Now" data-ja="申し込む">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg-pattern"></div>
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content animate-on-scroll">
+          <div class="hero-badge" data-en="Japanese Language Excellence Since 2021" data-ja="2021年から日本語教育の卓越性">
+            <span class="dot"></span>
+            <span>Japanese Language Excellence Since 2021</span>
+          </div>
+
+          <h1 class="display-1 mb-4">
+            <span data-en="Master <span class='text-gradient'>Japanese</span> for Your Future in Japan" 
+                  data-ja="日本の未来のために<br><span class='text-gradient'>日本語</span>をマスター">Master <span class="text-gradient">Japanese</span> for Your Future in Japan</span>
+          </h1>
+
+          <p class="hero-subtitle" data-en="Excel Education & Training Center provides intensive, structured Japanese language training combined with expert guidance for students planning to study and build careers in Japan. Join our disciplined offline classes and start your journey today."
+             data-ja="エクセル教育トレーニングセンターは、日本での留学・キャリア構築を計画する学生のため、専門家によるガイダンスと組み合わせた集中的で体系的な日本語研修を提供します。規律のある対面クラスに参加し、今日からあなたの旅を始めましょう。">
+            Excel Education & Training Center provides intensive, structured Japanese language training
+            combined with expert guidance for students planning to study and build careers in Japan.
+            Join our disciplined offline classes and start your journey today.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="courses.html" class="btn btn-primary">
+              <i class="fas fa-book-open me-2"></i> <span data-en="View Courses" data-ja="コースを見る">View Courses</span>
+            </a>
+            <a href="contact.html" class="btn btn-secondary">
+              <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Consultation" data-ja="相談を予約">Book Consultation</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="position-relative animate-on-scroll" style="transition-delay: 120ms;">
+            <div class="card border-0 rounded-4 overflow-hidden hero-media-card">
+              <div class="card-body p-0 position-relative">
+                <img src="images/classroom.jpg" alt="Excel Education Classroom - Japanese Language Learning Environment" class="img-fluid classroom-img w-100">
+                <div class="play-overlay">
+                  <div class="play-button" role="button" tabindex="0" aria-label="Play facility tour">
+                    <i class="fas fa-play"></i>
+                  </div>
+                  <h3 class="mb-2" data-en="Tour Our Facility" data-ja="施設を見学">Tour Our Facility</h3>
+                  <p class="mb-0 opacity-75" data-en="See our premium learning environment" data-ja="高品質な学習環境をご覧ください">See our premium learning environment</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="position-absolute top-0 start-0 translate-middle">
+              <div style="width: 24px; height: 24px; background: var(--primary-500); border-radius: 999px;"></div>
+            </div>
+            <div class="position-absolute bottom-0 end-0 translate-middle">
+              <div style="width: 32px; height: 32px; background: var(--primary-300); border-radius: 999px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 animate-on-scroll">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-person-video3"></i>
+            </div>
+            <h3 data-en="Offline Classroom Training" data-ja="対面クラス指導">Offline Classroom Training</h3>
+            <p data-en="Personal attention & immediate feedback in physical classrooms" data-ja="対面クラスでの個別対応と即時フィードバック">
+              Personal attention & immediate feedback in physical classrooms
+            </p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <h3 data-en="3 Hours Daily Intensive" data-ja="1日3時間集中コース">3 Hours Daily Intensive</h3>
+            <p data-en="6 days a week for rapid progress and skill development" data-ja="週6日で急速な進歩とスキル向上">
+              6 days a week for rapid progress and skill development
+            </p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-snow"></i>
+            </div>
+            <h3 data-en="AC Classrooms" data-ja="空調完備教室">AC Classrooms</h3>
+            <p data-en="Noise-free, comfortable environment for focused learning" data-ja="静かで快適な集中学習環境">
+              Noise-free, comfortable environment for focused learning
+            </p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-file-text"></i>
+            </div>
+            <h3 data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</h3>
+            <p data-en="Complete Japan student visa application support" data-ja="日本学生ビザ申請の完全サポート">
+              Complete Japan student visa application support
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-6 animate-on-scroll">
+          <div class="stat-card">
+            <div class="stat-number" data-count="98" data-suffix="%">0%</div>
+            <div class="stat-label" data-en="Success Rate" data-ja="成功率">Success Rate</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="stat-card">
+            <div class="stat-number" data-count="500" data-suffix="">0</div>
+            <div class="stat-label" data-en="Students Trained" data-ja="研修学生数">Students Trained</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="stat-card">
+            <div class="stat-number" data-count="180" data-suffix="">0</div>
+            <div class="stat-label" data-en="Class Hours/Month" data-ja="月間授業時間">Class Hours/Month</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6 animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="stat-card">
+            <div class="stat-number" data-count="100" data-suffix="%">0%</div>
+            <div class="stat-label" data-en="Offline Focus" data-ja="対面指導専用">Offline Focus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Preview -->
+  <section class="courses preview-section" id="courses">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Our Japanese Language Courses" data-ja="日本語コース">Our Japanese Language Courses</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Intensive 3-month programs designed to prepare you for JLPT/NAT examinations and real-life communication in Japan. Choose your starting level."
+             data-ja="JLPT/NAT試験と日本での実生活コミュニケーションに備えるための集中3ヶ月プログラム。あなたの開始レベルを選択してください。">
+            Intensive 3-month programs designed to prepare you for JLPT/NAT examinations
+            and real-life communication in Japan. Choose your starting level.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 animate-on-scroll">
+          <div class="course-card">
+            <div class="course-image-container">
+              <img src="images/course-n5.jpg" alt="Japanese N5 Course - Beginner Level" class="course-image">
+              <div class="course-image-overlay"></div>
+            </div>
+            <span class="course-level" data-en="Beginner Level" data-ja="初心者レベル">Beginner Level</span>
+            <h3 data-en="Japanese Language Course – N5" data-ja="日本語コース – N5">Japanese Language Course – N5</h3>
+            <p class="text-secondary" data-en="Perfect for absolute beginners with no prior Japanese experience" 
+               data-ja="日本語経験のない完全な初心者に最適">Perfect for absolute beginners with no prior Japanese experience</p>
+
+            <div class="mb-4">
+              <div class="course-feature"><i class="bi bi-calendar-check"></i><span data-en="Duration: 3 Months" data-ja="期間: 3ヶ月">Duration: 3 Months</span></div>
+              <div class="course-feature"><i class="bi bi-calendar-week"></i><span data-en="Class Days: 6 Days/Week" data-ja="授業日: 週6日">Class Days: 6 Days/Week</span></div>
+              <div class="course-feature"><i class="bi bi-clock"></i><span data-en="Daily: 3 Hours/Day" data-ja="毎日: 3時間">Daily: 3 Hours/Day</span></div>
+              <div class="course-feature"><i class="bi bi-building"></i><span data-en="Mode: Offline Classroom" data-ja="形式: 対面授業">Mode: Offline Classroom</span></div>
+              <div class="course-feature"><i class="bi bi-journal-text"></i><span data-en="Covers: Hiragana, Katakana, Basic Grammar" data-ja="内容: ひらがな、カタカナ、基本文法">Covers: Hiragana, Katakana, Basic Grammar</span></div>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary w-100">
+              <i class="fas fa-user-plus me-2"></i> <span data-en="Enroll in N5 Course" data-ja="N5コースに申し込む">Enroll in N5 Course</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="course-card featured">
+            <div class="course-image-container">
+              <img src="images/course-n4.jpg" alt="Japanese N4 Course - Intermediate Level" class="course-image">
+              <div class="course-image-overlay"></div>
+            </div>
+            <span class="course-level" data-en="Intermediate Level" data-ja="中級レベル">Intermediate Level</span>
+            <h3 data-en="Japanese Language Course – N4" data-ja="日本語コース – N4">Japanese Language Course – N4</h3>
+            <p class="text-secondary" data-en="For students who have completed N5 or have basic Japanese knowledge" 
+               data-ja="N5修了または基礎日本語知識のある学生向け">For students who have completed N5 or have basic Japanese knowledge</p>
+
+            <div class="mb-4">
+              <div class="course-feature"><i class="bi bi-calendar-check"></i><span data-en="Duration: 3 Months" data-ja="期間: 3ヶ月">Duration: 3 Months</span></div>
+              <div class="course-feature"><i class="bi bi-calendar-week"></i><span data-en="Class Days: 6 Days/Week" data-ja="授業日: 週6日">Class Days: 6 Days/Week</span></div>
+              <div class="course-feature"><i class="bi bi-clock"></i><span data-en="Daily: 3 Hours/Day" data-ja="毎日: 3時間">Daily: 3 Hours/Day</span></div>
+              <div class="course-feature"><i class="bi bi-building"></i><span data-en="Mode: Offline Classroom" data-ja="形式: 対面授業">Mode: Offline Classroom</span></div>
+              <div class="course-feature"><i class="bi bi-journal-text"></i><span data-en="Covers: Kanji, Intermediate Grammar, Conversation" data-ja="内容: 漢字、中級文法、会話">Covers: Kanji, Intermediate Grammar, Conversation</span></div>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary w-100">
+              <i class="fas fa-user-plus me-2"></i> <span data-en="Enroll in N4 Course" data-ja="N4コースに申し込む">Enroll in N4 Course</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 360ms;">
+        <a href="courses.html" class="btn btn-primary px-5 py-3">
+          <i class="fas fa-list-alt me-2"></i> <span data-en="View Complete Course Details" data-ja="コース詳細を見る">View Complete Course Details</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Japan -->
+  <section class="why-japan preview-section" id="why-japan">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Why Study in Japan?" data-ja="なぜ日本で学ぶのか？">
+            Why Study in Japan?
+          </h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Japan offers unparalleled opportunities for international students seeking quality education, career growth, and personal development in a safe, disciplined society."
+             data-ja="日本は、安全で規律ある社会の中で、質の高い教育、キャリア成長、個人成長を求める留学生に比類のない機会を提供します。">
+            Japan offers unparalleled opportunities for international students seeking
+            quality education, career growth, and personal development in a safe, disciplined society.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="reason-card">
+            <div class="reason-icon"><i class="bi bi-award"></i></div>
+            <h4 data-en="World-Class Education" data-ja="世界クラスの教育">World-Class Education</h4>
+            <p data-en="Japan's universities rank among the world's best, offering globally recognized degrees with emphasis on practical skills."
+               data-ja="日本の大学は世界最高水準にランクされ、実践的スキルを重視した世界的に認められた学位を提供しています。">
+              Japan's universities rank among the world's best, offering globally recognized degrees with emphasis on practical skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="reason-card">
+            <div class="reason-icon"><i class="bi bi-cash-coin"></i></div>
+            <h4 data-en="Affordable Study Path" data-ja="手頃な留学費用">Affordable Study Path</h4>
+            <p data-en="Compared to Western countries, Japan offers high-quality education at reasonable costs with various scholarship opportunities."
+               data-ja="欧米諸国と比較して、日本はさまざまな奨学金機会とともに、手頃な費用で高品質な教育を提供します。">
+              Compared to Western countries, Japan offers high-quality education at reasonable costs with various scholarship opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="reason-card">
+            <div class="reason-icon"><i class="bi bi-briefcase"></i></div>
+            <h4 data-en="Legal Part-Time Work" data-ja="合法的なアルバイト">Legal Part-Time Work</h4>
+            <p data-en="International students can work up to 28 hours per week legally, helping manage living expenses while studying."
+               data-ja="留学生は週最大28時間、合法的にアルバイトが可能で、学業中の生活費管理を支援します。">
+              International students can work up to 28 hours per week legally, helping manage living expenses while studying.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="reason-card">
+            <div class="reason-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <h4 data-en="Strong Career Opportunities" data-ja="充実した就職機会">Strong Career Opportunities</h4>
+            <p data-en="Japan's growing economy creates demand for skilled professionals, offering excellent employment prospects after graduation."
+               data-ja="日本の成長経済は熟練専門家の需要を生み出し、卒業後の優れた雇用見通しを提供します。">
+              Japan's growing economy creates demand for skilled professionals, offering excellent employment prospects after graduation.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="reason-card">
+            <div class="reason-icon"><i class="bi bi-shield-check"></i></div>
+            <h4 data-en="Safe & Disciplined Society" data-ja="安全で規律ある社会">Safe & Disciplined Society</h4>
+            <p data-en="Japan is globally recognized for safety, cleanliness, respect, and social order, ideal for international students."
+               data-ja="日本は安全、清潔、礼儀、社会秩序で世界的に認められており、留学生に理想的な環境です。">
+              Japan is globally recognized for safety, cleanliness, respect, and social order, ideal for international students.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="reason-card">
+            <div class="reason-icon"><i class="bi bi-translate"></i></div>
+            <h4 data-en="Cultural Immersion" data-ja="文化体験">Cultural Immersion</h4>
+            <p data-en="Experience rich traditions, advanced technology, and a unique blend of ancient and modern culture."
+               data-ja="豊かな伝統、先進技術、古代と現代文化のユニークな融合を体験できます。">
+              Experience rich traditions, advanced technology, and a unique blend of ancient and modern culture.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 360ms;">
+        <a href="why-japan.html" class="btn btn-primary px-5 py-3">
+          <i class="fas fa-globe-asia me-2"></i> <span data-en="Learn More About Japan" data-ja="日本についてもっと学ぶ">Learn More About Japan</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="process preview-section" id="process">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Our Structured Process" data-ja="体系的なプロセス">Our Structured Process</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="A disciplined, step-by-step approach that ensures comprehensive learning and proper preparation for your Japanese language journey."
+             data-ja="日本語学習の旅において包括的な学習と適切な準備を保証する、規律あるステップバイステップのアプローチです。">
+            A disciplined, step-by-step approach that ensures comprehensive learning and
+            proper preparation for your Japanese language journey.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="process-step animate-on-scroll">
+            <div class="process-number">1</div>
+            <div class="process-content">
+              <h4 data-en="Initial Consultation & Assessment" data-ja="初回相談・評価">Initial Consultation & Assessment</h4>
+              <p data-en="We begin with a detailed consultation to understand your Japanese language goals, assess your current level, and recommend the appropriate course (N5 or N4)."
+                 data-ja="詳細な相談から始め、あなたの日本語学習目標を理解し、現在のレベルを評価し、適切なコース（N5またはN4）を推薦します。">
+                We begin with a detailed consultation to understand your Japanese language goals,
+                assess your current level, and recommend the appropriate course (N5 or N4).
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step animate-on-scroll" style="transition-delay: 120ms;">
+            <div class="process-number">2</div>
+            <div class="process-content">
+              <h4 data-en="Intensive Classroom Training" data-ja="集中対面研修">Intensive Classroom Training</h4>
+              <p data-en="3 hours daily, 6 days a week of focused offline learning in our AC, noise-free classrooms with experienced instructors providing immediate feedback and correction."
+                 data-ja="経験豊富な講師による即時フィードバックと修正を提供する空調完備・静かな教室で、週6日、1日3時間の集中対面学習です。">
+                3 hours daily, 6 days a week of focused offline learning in our AC, noise-free classrooms
+                with experienced instructors providing immediate feedback and correction.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step animate-on-scroll" style="transition-delay: 240ms;">
+            <div class="process-number">3</div>
+            <div class="process-content">
+              <h4 data-en="Examination Preparation" data-ja="試験対策">Examination Preparation</h4>
+              <p data-en="Comprehensive preparation for JLPT and NAT examinations through mock tests, targeted practice, and strategy sessions to ensure examination success."
+                 data-ja="模擬試験、重点的な練習、戦略セッションを通じたJLPTおよびNAT試験の包括的な準備で、試験の成功を確実にします。">
+                Comprehensive preparation for JLPT and NAT examinations through mock tests,
+                targeted practice, and strategy sessions to ensure examination success.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step animate-on-scroll" style="transition-delay: 360ms;">
+            <div class="process-number">4</div>
+            <div class="process-content">
+              <h4 data-en="Visa Guidance & Post-Course Support" data-ja="ビザガイダンス・修了後サポート">Visa Guidance & Post-Course Support</h4>
+              <p data-en="Expert guidance on Japan student visa applications, document preparation, and interview readiness, followed by pre-departure orientation for Japan."
+                 data-ja="日本学生ビザ申請、書類準備、面接準備に関する専門家のガイダンス、その後日本の出発前オリエンテーションが続きます。">
+                Expert guidance on Japan student visa applications, document preparation,
+                and interview readiness, followed by pre-departure orientation for Japan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 480ms;">
+        <a href="process.html" class="btn btn-primary px-5 py-3">
+          <i class="fas fa-list-check me-2"></i> <span data-en="View Detailed Process" data-ja="詳細プロセスを見る">View Detailed Process</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Preview - MARQUEE STYLE -->
+  <section class="testimonials preview-section" id="testimonials">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Student Success Stories" data-ja="学生の成功事例">Student Success Stories</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Hear from our students who have successfully mastered Japanese and are now building their futures in Japan through our structured training program."
+             data-ja="当校の体系的なトレーニングプログラムを通じて日本語を習得し、現在日本で未来を築いている学生たちの声をお聞きください。">
+            Hear from our students who have successfully mastered Japanese and are now
+            building their futures in Japan through our structured training program.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-marquee-container">
+        <div class="testimonial-pause"></div>
+        <div class="testimonial-marquee-track">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-marquee-card">
+            <div class="testimonial-image-container">
+              <img src="images/students/student-ahmed.jpg" alt="Ahmed Rahman - Successfully passed JLPT N5" class="testimonial-image">
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-quote" data-en="&quot;Excel Education's disciplined approach helped me pass JLPT N5 in just 3 months. The offline classes and daily practice were exactly what I needed.&quot;"
+                 data-ja="「エクセル教育の規律あるアプローチにより、わずか3ヶ月でJLPT N5に合格できました。対面クラスと毎日の練習がまさに私に必要なものでした。」">
+                "Excel Education's disciplined approach helped me pass JLPT N5 in just 3 months.
+                The offline classes and daily practice were exactly what I needed."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AR</div>
+                <div class="author-info">
+                  <h5>Ahmed Rahman</h5>
+                  <p data-en="JLPT N5 Certified, Now in Tokyo" data-ja="JLPT N5取得、現在東京在住">JLPT N5 Certified, Now in Tokyo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-marquee-card">
+            <div class="testimonial-image-container">
+              <img src="images/students/student-sabrina.jpg" alt="Sabrina Khan - Studying at Osaka University" class="testimonial-image">
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-quote" data-en="&quot;The 3-hour daily classes and AC classrooms made learning enjoyable. I cleared N4 and got my student visa for Osaka University.&quot;"
+                 data-ja="「1日3時間の授業と空調教室により、学習が楽しくなりました。N4に合格し、大阪大学の学生ビザを取得できました。」">
+                "The 3-hour daily classes and AC classrooms made learning enjoyable.
+                I cleared N4 and got my student visa for Osaka University."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SK</div>
+                <div class="author-info">
+                  <h5>Sabrina Khan</h5>
+                  <p data-en="Studying at Osaka University" data-ja="大阪大学で学んでいます">Studying at Osaka University</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-marquee-card">
+            <div class="testimonial-image-container">
+              <img src="images/students/student-ibrahim.jpg" alt="Md. Ibrahim - Working in Yokohama, Japan" class="testimonial-image">
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-quote" data-en="&quot;From zero Japanese to conversational in 6 months. The structured curriculum and expert teachers made all the difference.&quot;"
+                 data-ja="「ゼロから6ヶ月で会話レベルに。体系的なカリキュラムと専門家の教師がすべてを変えました。」">
+                "From zero Japanese to conversational in 6 months. The structured
+                curriculum and expert teachers made all the difference."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MI</div>
+                <div class="author-info">
+                  <h5>Md. Ibrahim</h5>
+                  <p data-en="Working in Yokohama, Japan" data-ja="日本横浜で働いています">Working in Yokohama, Japan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate for seamless loop -->
+          <div class="testimonial-marquee-card">
+            <div class="testimonial-image-container">
+              <img src="images/students/student-ahmed.jpg" alt="Ahmed Rahman - Successfully passed JLPT N5" class="testimonial-image">
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-quote" data-en="&quot;Excel Education's disciplined approach helped me pass JLPT N5 in just 3 months. The offline classes and daily practice were exactly what I needed.&quot;"
+                 data-ja="「エクセル教育の規律あるアプローチにより、わずか3ヶ月でJLPT N5に合格できました。対面クラスと毎日の練習がまさに私に必要なものでした。」">
+                "Excel Education's disciplined approach helped me pass JLPT N5 in just 3 months.
+                The offline classes and daily practice were exactly what I needed."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AR</div>
+                <div class="author-info">
+                  <h5>Ahmed Rahman</h5>
+                  <p data-en="JLPT N5 Certified, Now in Tokyo" data-ja="JLPT N5取得、現在東京在住">JLPT N5 Certified, Now in Tokyo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 360ms;">
+        <a href="testimonials.html" class="btn btn-primary px-5 py-3">
+          <i class="fas fa-star me-2"></i> <span data-en="Read More Success Stories" data-ja="成功事例をもっと読む">Read More Success Stories</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2 class="cta-title" data-en="Ready to Start Your Japanese Journey?" data-ja="日本語の旅を始める準備はできていますか？">Ready to Start Your Japanese Journey?</h2>
+        <p class="cta-subtitle" 
+           data-en="Join Excel Education & Training Center and receive structured, intensive Japanese language training in our premium offline classrooms. Let us guide you toward success in Japan."
+           data-ja="エクセル教育トレーニングセンターに参加し、高品質な対面教室で体系的な集中日本語研修を受けましょう。日本での成功に向けてご案内します。">
+          Join Excel Education & Training Center and receive structured, intensive Japanese language
+          training in our premium offline classrooms. Let us guide you toward success in Japan.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Free Consultation" data-ja="無料相談を予約">Book Free Consultation</span>
+          </a>
+          <a href="tel:+880XXXXXXXXXX" class="btn btn-outline-light px-5 py-3">
+            <i class="fas fa-phone me-2"></i> <span data-en="Call Now: +880 1745-715127" data-ja="今すぐ電話: +880 1745-715127">Call Now: +880 1745-715127</span>
+          </a>
+        </div>
+
+        <p class="mt-4 opacity-75">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          <span data-en="Location: Kajla, Jatrabari, Dhaka | Office Time: Sat-Thu, 10:00 AM – 6:00 PM"
+                data-ja="所在地: カジュラ、ジャトラバリ、ダッカ | 営業時間: 土〜木、午前10時 – 午後6時">
+            Location: Kajla, Jatrabari, Dhaka | Office Time: Sat-Thu, 10:00 AM – 6:00 PM
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+          </div>
+          <p class="footer-description" 
+             data-en="Excel Education & Training Center is a premier Japanese language institute in Dhaka, offering intensive N5/N4 courses and Japan student visa guidance through structured offline classroom training in a disciplined, focused environment."
+             data-ja="エクセル教育トレーニングセンターはダッカの主要な日本語学校で、規律ある集中環境での体系的な対面教室研修を通じて、集中的なN5/N4コースと日本学生ビザガイダンスを提供しています。">
+            Excel Education & Training Center is a premier Japanese language institute in Dhaka,
+            offering intensive N5/N4 courses and Japan student visa guidance through structured
+            offline classroom training in a disciplined, focused environment.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="courses.html" class="footer-link" data-en="Courses" data-ja="コース">Courses</a>
+          <a href="why-japan.html" class="footer-link" data-en="Why Japan" data-ja="日本について">Why Japan</a>
+          <a href="process.html" class="footer-link" data-en="Our Process" data-ja="プロセス">Our Process</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="testimonials.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Our Courses" data-ja="コース一覧">Our Courses</h5>
+          <a href="courses.html#n5" class="footer-link" data-en="Japanese N5 (Beginner)" data-ja="日本語N5 (初心者)">Japanese N5 (Beginner)</a>
+          <a href="courses.html#n4" class="footer-link" data-en="Japanese N4 (Intermediate)" data-ja="日本語N4 (中級)">Japanese N4 (Intermediate)</a>
+          <a href="courses.html#batch" class="footer-link" data-en="Batch Schedule" data-ja="バッチスケジュール">Batch Schedule</a>
+          <a href="courses.html#fees" class="footer-link" data-en="Fee Structure" data-ja="料金体系">Fee Structure</a>
+          <a href="courses.html#materials" class="footer-link" data-en="Study Materials" data-ja="学習教材">Study Materials</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Address" data-ja="住所">Address</div>
+                <div class="text-tertiary">Kajla, Jatrabari, Dhaka, Bangladesh</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone" data-ja="電話">Phone</div>
+                <a href="tel:+880XXXXXXXXXX" class="footer-link">+880 1745-715127</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Excel Education & Training Center. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エクセル教育トレーニングセンター。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Excel Education & Training Center. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
