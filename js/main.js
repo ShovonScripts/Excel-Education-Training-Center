@@ -332,6 +332,223 @@ class GallerySlider {
 }
 
 // ======================
+// COMPANY OVERVIEW SLIDER
+// ======================
+
+class CompanyOverviewSlider {
+  constructor() {
+    this.currentSlide = 0;
+    this.slides = [];
+    this.autoSlideInterval = null;
+    this.autoSlideDelay = 5000; // 5 seconds
+    this.isAutoPlaying = true;
+  }
+
+  init() {
+    this.getSlides();
+    this.setupEventListeners();
+    this.updateSliderPosition();
+    this.startAutoSlide();
+  }
+
+  getSlides() {
+    this.slides = document.querySelectorAll('.overview-slide');
+    return this.slides.length;
+  }
+
+  goToSlide(index) {
+    const totalSlides = this.getSlides();
+    if (index >= totalSlides) {
+      this.currentSlide = 0;
+    } else if (index < 0) {
+      this.currentSlide = totalSlides - 1;
+    } else {
+      this.currentSlide = index;
+    }
+    
+    this.updateSliderPosition();
+    this.updateActiveDot();
+    this.updateProgressBar();
+    this.updateCounter();
+  }
+
+  nextSlide() {
+    this.goToSlide(this.currentSlide + 1);
+  }
+
+  prevSlide() {
+    this.goToSlide(this.currentSlide - 1);
+  }
+
+  updateSliderPosition() {
+    const track = document.getElementById('overviewSliderTrack');
+    if (track) {
+      const slideWidth = 100; // 100% per slide
+      track.style.transform = `translateX(-${this.currentSlide * slideWidth}%)`;
+      
+      // Update slide opacity
+      this.slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === this.currentSlide);
+      });
+    }
+  }
+
+  updateActiveDot() {
+    const dots = document.querySelectorAll('.slider-dot');
+    dots.forEach((dot, index) => {
+      if (index === this.currentSlide) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+
+  updateProgressBar() {
+    const progressBar = document.getElementById('progressBar');
+    if (progressBar && this.slides.length > 0) {
+      const progress = ((this.currentSlide + 1) / this.slides.length) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+  }
+
+  updateCounter() {
+    const currentSlideEl = document.getElementById('currentSlide');
+    const totalSlidesEl = document.getElementById('totalSlides');
+    
+    if (currentSlideEl) {
+      currentSlideEl.textContent = this.currentSlide + 1;
+    }
+    
+    if (totalSlidesEl) {
+      totalSlidesEl.textContent = this.slides.length;
+    }
+  }
+
+  startAutoSlide() {
+    if (this.autoSlideInterval) {
+      clearInterval(this.autoSlideInterval);
+    }
+    
+    this.autoSlideInterval = setInterval(() => {
+      if (this.isAutoPlaying) {
+        this.nextSlide();
+      }
+    }, this.autoSlideDelay);
+  }
+
+  stopAutoSlide() {
+    if (this.autoSlideInterval) {
+      clearInterval(this.autoSlideInterval);
+      this.autoSlideInterval = null;
+    }
+  }
+
+  setupEventListeners() {
+    // Previous button
+    const prevBtn = document.getElementById('overviewSliderPrev');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        this.prevSlide();
+        this.restartAutoSlide();
+      });
+    }
+
+    // Next button
+    const nextBtn = document.getElementById('overviewSliderNext');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        this.nextSlide();
+        this.restartAutoSlide();
+      });
+    }
+
+    // Dot navigation
+    const dotsContainer = document.getElementById('overviewSliderDots');
+    if (dotsContainer) {
+      dotsContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('slider-dot')) {
+          const slideIndex = parseInt(e.target.getAttribute('data-slide'));
+          this.goToSlide(slideIndex);
+          this.restartAutoSlide();
+        }
+      });
+    }
+
+    // Pause auto-slide on hover
+    const sliderWrapper = document.querySelector('.overview-slider-wrapper');
+    if (sliderWrapper) {
+      sliderWrapper.addEventListener('mouseenter', () => {
+        this.isAutoPlaying = false;
+      });
+      
+      sliderWrapper.addEventListener('mouseleave', () => {
+        this.isAutoPlaying = true;
+        this.startAutoSlide();
+      });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      const overviewSection = document.getElementById('overview');
+      if (!overviewSection) return;
+      
+      const rect = overviewSection.getBoundingClientRect();
+      const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
+      
+      if (isInView) {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          this.prevSlide();
+          this.restartAutoSlide();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          this.nextSlide();
+          this.restartAutoSlide();
+        }
+      }
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    const sliderContainer = document.querySelector('.slider-aspect-ratio');
+    if (sliderContainer) {
+      sliderContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+      
+      sliderContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        this.handleSwipe(touchStartX, touchEndX);
+      });
+    }
+  }
+
+  handleSwipe(startX, endX) {
+    const swipeThreshold = 50;
+    const diff = startX - endX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swipe left - next slide
+        this.nextSlide();
+      } else {
+        // Swipe right - previous slide
+        this.prevSlide();
+      }
+      this.restartAutoSlide();
+    }
+  }
+
+  restartAutoSlide() {
+    this.stopAutoSlide();
+    this.startAutoSlide();
+  }
+}
+
+// ======================
 // MAIN APPLICATION
 // ======================
 
@@ -340,6 +557,7 @@ class App {
     this.languageManager = new LanguageManager();
     this.themeManager = new ThemeManager();
     this.gallerySlider = new GallerySlider();
+    this.companyOverviewSlider = new CompanyOverviewSlider();
     this.init();
   }
 
@@ -348,8 +566,15 @@ class App {
     this.languageManager.init();
     this.themeManager.init();
     
-    // Initialize gallery slider
-    this.gallerySlider.init();
+    // Initialize gallery slider if exists
+    if (document.querySelector('.gallery-slider-track')) {
+      this.gallerySlider.init();
+    }
+    
+    // Initialize company overview slider if exists
+    if (document.querySelector('.overview-slider-track')) {
+      this.companyOverviewSlider.init();
+    }
 
     // Initialize other components
     this.initScrollAnimations();
@@ -588,21 +813,7 @@ class App {
 }
 
 // ======================
-// INITIALIZE APP
-// ======================
-
-document.addEventListener('DOMContentLoaded', () => {
-  const app = new App();
-  
-  // Initialize Bootstrap tooltips if any
-  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
-});
-
-// ======================
-// SWIPE SUPPORT FOR MOBILE
+// GLOBAL SWIPE SUPPORT FOR MOBILE
 // ======================
 
 let touchStartX = 0;
@@ -614,37 +825,106 @@ document.addEventListener('touchstart', (e) => {
 
 document.addEventListener('touchend', (e) => {
   touchEndX = e.changedTouches[0].screenX;
-  handleSwipe();
+  handleGlobalSwipe();
 }, false);
 
-function handleSwipe() {
+function handleGlobalSwipe() {
+  // Check which slider is in view and handle accordingly
   const gallerySection = document.getElementById('gallery');
-  if (!gallerySection) return;
+  const overviewSection = document.getElementById('overview');
   
-  const rect = gallerySection.getBoundingClientRect();
-  const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
-  
-  if (isInView) {
-    const swipeThreshold = 50; // Minimum swipe distance
+  // Check gallery slider
+  if (gallerySection) {
+    const galleryRect = gallerySection.getBoundingClientRect();
+    const galleryInView = galleryRect.top < window.innerHeight && galleryRect.bottom >= 0;
     
-    if (touchEndX < touchStartX - swipeThreshold) {
-      // Swipe left - next slide
-      if (window.app && window.app.gallerySlider) {
+    if (galleryInView && window.app && window.app.gallerySlider) {
+      const swipeThreshold = 50;
+      
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left - next slide
         window.app.gallerySlider.nextSlide();
         window.app.gallerySlider.restartAutoSlide();
-      }
-    }
-    
-    if (touchEndX > touchStartX + swipeThreshold) {
-      // Swipe right - previous slide
-      if (window.app && window.app.gallerySlider) {
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right - previous slide
         window.app.gallerySlider.prevSlide();
         window.app.gallerySlider.restartAutoSlide();
+      }
+      return; // Stop checking other sections
+    }
+  }
+  
+  // Check overview slider
+  if (overviewSection) {
+    const overviewRect = overviewSection.getBoundingClientRect();
+    const overviewInView = overviewRect.top < window.innerHeight && overviewRect.bottom >= 0;
+    
+    if (overviewInView && window.app && window.app.companyOverviewSlider) {
+      const swipeThreshold = 50;
+      
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left - next slide
+        window.app.companyOverviewSlider.nextSlide();
+        window.app.companyOverviewSlider.restartAutoSlide();
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right - previous slide
+        window.app.companyOverviewSlider.prevSlide();
+        window.app.companyOverviewSlider.restartAutoSlide();
       }
     }
   }
 }
 
-// Make app globally accessible for swipe functionality
-window.app = new App();
+// ======================
+// INITIALIZE APP
+// ======================
 
+// Initialize app when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  const app = new App();
+  window.app = app; // Make app globally accessible
+  
+  // Initialize Bootstrap tooltips if any
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+  
+  // Initialize Bootstrap collapse for mobile menu
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  if (navbarCollapse) {
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+      toggle: false
+    });
+  }
+});
+
+// ======================
+// WINDOW RESIZE HANDLER
+// ======================
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    // Update any responsive features here
+    if (window.app) {
+      // Reinitialize language manager for responsive text updates
+      window.app.languageManager.updateAllText();
+    }
+  }, 250);
+});
+
+// ======================
+// ERROR HANDLING
+// ======================
+
+// Global error handler for better debugging
+window.addEventListener('error', function(e) {
+  console.error('Global error:', e.message, e.filename, e.lineno);
+});
+
+// Promise rejection handler
+window.addEventListener('unhandledrejection', function(e) {
+  console.error('Unhandled promise rejection:', e.reason);
+});

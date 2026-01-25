@@ -485,35 +485,25 @@
       border: 1px solid var(--border-color);
     }
 
-    /* ===== GALLERY SECTION (IMAGE ONLY) ===== */
-    .about-gallery-section {
+    /* ===== 16:9 SLIDER SECTION ===== */
+    .gallery-section {
       padding: 80px 0;
       background: var(--bg-secondary);
     }
 
-    .about-gallery-slider-wrapper {
+    /* 16:9 Aspect Ratio Container */
+    .slider-aspect-ratio {
       position: relative;
-      overflow: hidden;
       width: 100%;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
       border-radius: var(--radius-xl);
+      overflow: hidden;
       box-shadow: var(--shadow-2xl);
       background: var(--bg-card);
       border: 1px solid var(--border-color);
     }
 
-    .about-gallery-slider-track {
-      display: flex;
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      height: 0;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-      position: relative;
-    }
-
-    .about-gallery-slide {
-      flex: 0 0 100%;
-      position: relative;
-      overflow: hidden;
-      height: 100%;
+    .overview-slider-wrapper {
       position: absolute;
       top: 0;
       left: 0;
@@ -521,33 +511,111 @@
       height: 100%;
     }
 
-    .about-gallery-slide-image {
+    .overview-slider-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
+      position: relative;
+    }
+
+    .overview-slide {
+      flex: 0 0 100%;
+      min-width: 100%;
+      position: relative;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .overview-slide.active {
+      opacity: 1;
+    }
+
+    .slide-image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.8s ease;
+      display: block;
     }
 
-    .about-gallery-slide:hover .about-gallery-slide-image {
-      transform: scale(1.05);
+    .slide-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
     }
 
-    /* NO TEXT OVERLAY - Images only */
-    .about-gallery-slide-caption {
-      display: none; /* Completely hide captions */
-    }
-
-    .about-gallery-slider-controls {
+    .slide-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2.5rem;
-      padding: 0 20px;
+      padding: 0 5rem;
+      color: white;
+      z-index: 2;
     }
 
-    .about-gallery-slider-prev,
-    .about-gallery-slider-next {
+    .slide-number {
+      font-size: 8rem;
+      font-weight: 800;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.1);
+      margin-right: 3rem;
+      font-family: var(--font-heading);
+      min-width: 120px;
+    }
+
+    .slide-text {
+      max-width: 600px;
+    }
+
+    .slide-text h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .slide-text p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0;
+    }
+
+    /* Slider Controls */
+    .overview-slider-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .controls-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .overview-slider-prev,
+    .overview-slider-next {
       width: 56px;
       height: 56px;
       border-radius: 50%;
@@ -564,8 +632,8 @@
       flex-shrink: 0;
     }
 
-    .about-gallery-slider-prev:hover,
-    .about-gallery-slider-next:hover {
+    .overview-slider-prev:hover,
+    .overview-slider-next:hover {
       background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
       color: white;
       transform: translateY(-2px);
@@ -573,23 +641,50 @@
       border-color: transparent;
     }
 
-    .about-gallery-slider-prev:focus-visible,
-    .about-gallery-slider-next:focus-visible {
-      outline: none;
-      box-shadow: var(--ring);
+    .slider-counter {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      min-width: 60px;
     }
 
-    .about-gallery-slider-dots {
+    .current-slide {
+      color: var(--primary-600);
+    }
+
+    .divider {
+      color: var(--text-secondary);
+      opacity: 0.6;
+    }
+
+    .slider-progress {
+      flex: 1;
+      max-width: 300px;
+      height: 4px;
+      background: var(--border-color);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-500), var(--primary-400));
+      width: 33.33%; /* For 3 slides */
+      transition: width 0.3s ease;
+    }
+
+    .slider-dots {
       display: flex;
       gap: 0.75rem;
       align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
     }
 
-    .about-gallery-slider-dot {
-      width: 14px;
-      height: 14px;
+    .slider-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: var(--border-color);
       border: none;
@@ -598,20 +693,15 @@
       padding: 0;
     }
 
-    .about-gallery-slider-dot:hover {
+    .slider-dot:hover {
       background: var(--primary-400);
       transform: scale(1.2);
     }
 
-    .about-gallery-slider-dot.active {
+    .slider-dot.active {
       background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
       transform: scale(1.2);
       box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
-    }
-
-    .about-gallery-slider-dot:focus-visible {
-      outline: none;
-      box-shadow: var(--ring);
     }
 
     /* ===== ACHIEVEMENTS SECTION ===== */
@@ -688,20 +778,80 @@
       border-color: rgba(86, 239, 172, 0.2);
     }
 
-    [data-theme="dark"] .about-gallery-slider-wrapper {
+    [data-theme="dark"] .slider-aspect-ratio {
       border-color: rgba(148, 163, 184, 0.25);
     }
 
-    [data-theme="dark"] .about-gallery-slider-prev,
-    [data-theme="dark"] .about-gallery-slider-next {
+    [data-theme="dark"] .overview-slider-prev,
+    [data-theme="dark"] .overview-slider-next {
       background: var(--bg-surface);
       border-color: var(--border-color);
     }
 
     /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 1200px) {
+      .slide-content {
+        padding: 0 4rem;
+      }
+      
+      .slide-number {
+        font-size: 6rem;
+        margin-right: 2rem;
+        min-width: 100px;
+      }
+      
+      .slide-text h3 {
+        font-size: 2.25rem;
+      }
+      
+      .slide-text p {
+        font-size: 1.15rem;
+      }
+    }
+
     @media (max-width: 992px) {
       #about-hero h1.display-1 {
         font-size: 2.8rem;
+      }
+      
+      .slide-content {
+        padding: 0 3rem;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .slide-number {
+        font-size: 5rem;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      .slide-text h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .slide-text p {
+        font-size: 1.1rem;
+      }
+      
+      .overview-slider-controls {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      .controls-left {
+        order: 2;
+      }
+      
+      .slider-progress {
+        order: 1;
+        max-width: 100%;
+      }
+      
+      .slider-dots {
+        order: 3;
       }
       
       .timeline-content p {
@@ -751,15 +901,31 @@
         font-size: 0.9rem;
       }
       
-      .about-gallery-slider-controls {
-        margin-top: 2rem;
-        gap: 1rem;
+      .slider-aspect-ratio {
+        border-radius: var(--radius-lg);
       }
       
-      .about-gallery-slider-prev,
-      .about-gallery-slider-next {
-        width: 50px;
-        height: 50px;
+      .slide-content {
+        padding: 0 2rem;
+      }
+      
+      .slide-number {
+        font-size: 4rem;
+      }
+      
+      .slide-text h3 {
+        font-size: 1.75rem;
+      }
+      
+      .overview-slider-prev,
+      .overview-slider-next {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+      }
+      
+      .slider-counter {
+        font-size: 1.1rem;
       }
     }
 
@@ -803,28 +969,45 @@
         padding: 0.4rem 0.8rem;
       }
       
-      .about-gallery-slider-controls {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
+      .slider-aspect-ratio {
+        border-radius: var(--radius-md);
       }
       
-      .about-gallery-slider-prev,
-      .about-gallery-slider-next {
+      .slide-content {
+        padding: 0 1.5rem;
+      }
+      
+      .slide-number {
+        font-size: 3.5rem;
+      }
+      
+      .slide-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .overview-slider-controls {
+        gap: 1rem;
+      }
+      
+      .controls-left {
+        gap: 1rem;
+      }
+      
+      .overview-slider-prev,
+      .overview-slider-next {
         width: 44px;
         height: 44px;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       
-      .about-gallery-slider-dots {
-        order: -1;
-        width: 100%;
-        margin-bottom: 1rem;
+      .slider-dots {
+        gap: 0.5rem;
       }
       
-      .about-gallery-slider-dot {
-        width: 12px;
-        height: 12px;
+      .slider-dot {
+        width: 10px;
+        height: 10px;
       }
     }
 
@@ -1369,8 +1552,8 @@
   </div>
 </section>
 
-<!-- Gallery Section (IMAGE ONLY - NO TEXT) -->
-<section class="about-gallery-section" id="gallery">
+<!-- Gallery Section (16:9 Image Slider) -->
+<section class="gallery-section" id="gallery">
   <div class="container">
     <div class="row mb-5">
       <div class="col-lg-8 mx-auto text-center">
@@ -1385,80 +1568,216 @@
       </div>
     </div>
 
-    <div class="about-gallery-slider-container animate-on-scroll">
-      <div class="about-gallery-slider-wrapper">
-        <div class="about-gallery-slider-track" id="aboutGallerySliderTrack">
-          <!-- Slide 1 - Modern Classroom -->
-          <div class="about-gallery-slide active">
-            <img src="images/gallery/classroom-1.jpg" alt="Excel Education Modern Classroom with AC" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 2 - Classroom Session -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/classroom-session.jpg" alt="Students actively learning in Japanese language class" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 3 - Interactive Learning -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/interactive-session.jpg" alt="Interactive Japanese language practice session" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 4 - Language Practice -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/language-practice.jpg" alt="Students practicing Japanese language skills" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 5 - Exam Preparation -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/exam-preparation.jpg" alt="Students preparing for JLPT and NAT exams" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 6 - Cultural Event -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/cultural-event.jpg" alt="Japanese cultural activities and events" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 7 - Alumni Meet -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/alumni-meet.jpg" alt="Excel Education alumni meet and success stories" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 8 - Success Wall -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/success-wall.jpg" alt="Wall of success showcasing student achievements" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 9 - Graduation Ceremony -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/graduation-ceremony.jpg" alt="Graduation ceremony for Japanese language course completers" class="about-gallery-slide-image">
-          </div>
-          
-          <!-- Slide 10 - Visa Success -->
-          <div class="about-gallery-slide">
-            <img src="images/gallery/visa-success.jpg" alt="Student visa success stories and guidance" class="about-gallery-slide-image">
+    <!-- 16:9 Aspect Ratio Slider -->
+    <div class="overview-slider-container animate-on-scroll" style="transition-delay: 200ms;">
+      <div class="slider-aspect-ratio">
+        <div class="overview-slider-wrapper">
+          <div class="overview-slider-track" id="aboutGallerySliderTrack">
+            <!-- Slide 1 - Modern Classroom -->
+            <div class="overview-slide active">
+              <div class="slide-image-container">
+                <img src="images/gallery/classroom-1.jpg" alt="Excel Education Modern Classroom with AC" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">01</div>
+                <div class="slide-text">
+                  <h3 data-en="Modern Classroom Setup" data-ja="現代的な教室セットアップ">Modern Classroom Setup</h3>
+                  <p data-en="Fully air-conditioned, noise-free classrooms with modern teaching aids for focused Japanese language learning." data-ja="集中した日本語学習のための完全空調、無音の教室と最新の教育機器を備えた環境です。">
+                    Fully air-conditioned, noise-free classrooms with modern teaching aids for focused Japanese language learning.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 2 - Classroom Session -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/classroom-session.jpg" alt="Students actively learning in Japanese language class" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">02</div>
+                <div class="slide-text">
+                  <h3 data-en="Active Classroom Learning" data-ja="アクティブな教室学習">Active Classroom Learning</h3>
+                  <p data-en="Students engaged in interactive Japanese language sessions with experienced instructors, six days a week." data-ja="経験豊富な講師によるインタラクティブな日本語セッションで学生たちが週6日、積極的に学習に取り組んでいます。">
+                    Students engaged in interactive Japanese language sessions with experienced instructors, six days a week.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 3 - Interactive Learning -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/interactive-session.jpg" alt="Interactive Japanese language practice session" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">03</div>
+                <div class="slide-text">
+                  <h3 data-en="Interactive Practice Sessions" data-ja="インタラクティブな練習セッション">Interactive Practice Sessions</h3>
+                  <p data-en="Hands-on language practice with peers to build confidence and fluency in Japanese communication." data-ja="日本語コミュニケーションにおける自信と流暢さを構築するための仲間との実践的な言語練習です。">
+                    Hands-on language practice with peers to build confidence and fluency in Japanese communication.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 4 - Language Practice -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/language-practice.jpg" alt="Students practicing Japanese language skills" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">04</div>
+                <div class="slide-text">
+                  <h3 data-en="Language Skill Development" data-ja="言語スキルの開発">Language Skill Development</h3>
+                  <p data-en="Daily practice sessions focusing on reading, writing, listening, and speaking skills for JLPT success." data-ja="JLPT合格に向けた読む、書く、聞く、話すスキルに焦点を当てた毎日の練習セッションです。">
+                    Daily practice sessions focusing on reading, writing, listening, and speaking skills for JLPT success.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 5 - Exam Preparation -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/exam-preparation.jpg" alt="Students preparing for JLPT and NAT exams" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">05</div>
+                <div class="slide-text">
+                  <h3 data-en="Exam Preparation Center" data-ja="試験準備センター">Exam Preparation Center</h3>
+                  <p data-en="Intensive preparation for JLPT and NAT examinations with mock tests and personalized guidance." data-ja="模擬テストと個別指導によるJLPTおよびNAT試験のための集中的な準備です。">
+                    Intensive preparation for JLPT and NAT examinations with mock tests and personalized guidance.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 6 - Cultural Event -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/cultural-event.jpg" alt="Japanese cultural activities and events" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">06</div>
+                <div class="slide-text">
+                  <h3 data-en="Cultural Immersion Activities" data-ja="文化没入活動">Cultural Immersion Activities</h3>
+                  <p data-en="Experience Japanese culture through traditional events, festivals, and cultural workshops." data-ja="伝統的なイベント、祭り、文化ワークショップを通じて日本文化を体験します。">
+                    Experience Japanese culture through traditional events, festivals, and cultural workshops.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 7 - Alumni Meet -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/alumni-meet.jpg" alt="Excel Education alumni meet and success stories" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">07</div>
+                <div class="slide-text">
+                  <h3 data-en="Alumni Success Stories" data-ja="卒業生の成功ストーリー">Alumni Success Stories</h3>
+                  <p data-en="Meet successful graduates who have completed their studies and are now pursuing opportunities in Japan." data-ja="学習を完了し、現在日本で機会を追求している成功した卒業生たちと出会います。">
+                    Meet successful graduates who have completed their studies and are now pursuing opportunities in Japan.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 8 - Success Wall -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/success-wall.jpg" alt="Wall of success showcasing student achievements" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">08</div>
+                <div class="slide-text">
+                  <h3 data-en="Wall of Achievements" data-ja="達成の壁">Wall of Achievements</h3>
+                  <p data-en="Celebrating student success in JLPT exams, university admissions, and visa approvals for Japan." data-ja="JLPT試験、大学入学、日本ビザ承認における学生の成功を祝います。">
+                    Celebrating student success in JLPT exams, university admissions, and visa approvals for Japan.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 9 - Graduation Ceremony -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/graduation-ceremony.jpg" alt="Graduation ceremony for Japanese language course completers" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">09</div>
+                <div class="slide-text">
+                  <h3 data-en="Graduation Ceremonies" data-ja="卒業式">Graduation Ceremonies</h3>
+                  <p data-en="Official recognition of students' dedication and achievement in completing Japanese language courses." data-ja="日本語コースを完了した学生の献身と成果の公式な承認です。">
+                    Official recognition of students' dedication and achievement in completing Japanese language courses.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 10 - Visa Success -->
+            <div class="overview-slide">
+              <div class="slide-image-container">
+                <img src="images/gallery/visa-success.jpg" alt="Student visa success stories and guidance" class="slide-image">
+                <div class="slide-gradient-overlay"></div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-number">10</div>
+                <div class="slide-text">
+                  <h3 data-en="Visa Success Guidance" data-ja="ビザ成功ガイダンス">Visa Success Guidance</h3>
+                  <p data-en="Comprehensive support and guidance for Japan student visa applications and documentation process." data-ja="日本学生ビザ申請と書類作成プロセスのための包括的なサポートとガイダンスです。">
+                    Comprehensive support and guidance for Japan student visa applications and documentation process.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="about-gallery-slider-controls">
-        <button class="about-gallery-slider-prev" id="aboutGallerySliderPrev" aria-label="Previous slide">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="about-gallery-slider-dots" id="aboutGallerySliderDots">
-          <button class="about-gallery-slider-dot active" data-slide="0" aria-label="Go to slide 1"></button>
-          <button class="about-gallery-slider-dot" data-slide="1" aria-label="Go to slide 2"></button>
-          <button class="about-gallery-slider-dot" data-slide="2" aria-label="Go to slide 3"></button>
-          <button class="about-gallery-slider-dot" data-slide="3" aria-label="Go to slide 4"></button>
-          <button class="about-gallery-slider-dot" data-slide="4" aria-label="Go to slide 5"></button>
-          <button class="about-gallery-slider-dot" data-slide="5" aria-label="Go to slide 6"></button>
-          <button class="about-gallery-slider-dot" data-slide="6" aria-label="Go to slide 7"></button>
-          <button class="about-gallery-slider-dot" data-slide="7" aria-label="Go to slide 8"></button>
-          <button class="about-gallery-slider-dot" data-slide="8" aria-label="Go to slide 9"></button>
-          <button class="about-gallery-slider-dot" data-slide="9" aria-label="Go to slide 10"></button>
+      <!-- Slider Controls -->
+      <div class="overview-slider-controls">
+        <div class="controls-left">
+          <button class="overview-slider-prev" id="aboutGallerySliderPrev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-counter">
+            <span class="current-slide" id="aboutGalleryCurrentSlide">1</span>
+            <span class="divider">/</span>
+            <span class="total-slides" id="aboutGalleryTotalSlides">10</span>
+          </div>
+          <button class="overview-slider-next" id="aboutGallerySliderNext" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
-        <button class="about-gallery-slider-next" id="aboutGallerySliderNext" aria-label="Next slide">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+        
+        <div class="slider-progress">
+          <div class="progress-bar" id="aboutGalleryProgressBar"></div>
+        </div>
+        
+        <div class="slider-dots" id="aboutGallerySliderDots">
+          <button class="slider-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+          <button class="slider-dot" data-slide="1" aria-label="Go to slide 2"></button>
+          <button class="slider-dot" data-slide="2" aria-label="Go to slide 3"></button>
+          <button class="slider-dot" data-slide="3" aria-label="Go to slide 4"></button>
+          <button class="slider-dot" data-slide="4" aria-label="Go to slide 5"></button>
+          <button class="slider-dot" data-slide="5" aria-label="Go to slide 6"></button>
+          <button class="slider-dot" data-slide="6" aria-label="Go to slide 7"></button>
+          <button class="slider-dot" data-slide="7" aria-label="Go to slide 8"></button>
+          <button class="slider-dot" data-slide="8" aria-label="Go to slide 9"></button>
+          <button class="slider-dot" data-slide="9" aria-label="Go to slide 10"></button>
+        </div>
       </div>
     </div>
   </div>
@@ -1678,25 +1997,32 @@
         });
       });
 
-      // About Gallery Slider (Image Only)
+      // About Gallery Slider (16:9 Style)
       class AboutGallerySlider {
         constructor() {
           this.currentSlide = 0;
-          this.slides = document.querySelectorAll('.about-gallery-slide');
+          this.slides = [];
           this.autoSlideInterval = null;
           this.autoSlideDelay = 5000;
           this.isAutoPlaying = true;
         }
 
         init() {
+          this.getSlides();
           this.setupEventListeners();
           this.updateSliderPosition();
+          this.updateCounter();
+          this.updateProgressBar();
           this.startAutoSlide();
-          this.updateActiveDot();
+        }
+
+        getSlides() {
+          this.slides = document.querySelectorAll('#aboutGallerySliderTrack .overview-slide');
+          return this.slides.length;
         }
 
         goToSlide(index) {
-          const totalSlides = this.slides.length;
+          const totalSlides = this.getSlides();
           if (index >= totalSlides) {
             this.currentSlide = 0;
           } else if (index < 0) {
@@ -1707,6 +2033,8 @@
           
           this.updateSliderPosition();
           this.updateActiveDot();
+          this.updateProgressBar();
+          this.updateCounter();
         }
 
         nextSlide() {
@@ -1722,20 +2050,44 @@
           if (track) {
             const slideWidth = 100;
             track.style.transform = `translateX(-${this.currentSlide * slideWidth}%)`;
+            
+            // Update slide opacity
+            this.slides.forEach((slide, index) => {
+              slide.classList.toggle('active', index === this.currentSlide);
+            });
           }
         }
 
         updateActiveDot() {
-          const dots = document.querySelectorAll('.about-gallery-slider-dot');
+          const dots = document.querySelectorAll('#aboutGallerySliderDots .slider-dot');
           dots.forEach((dot, index) => {
             if (index === this.currentSlide) {
               dot.classList.add('active');
-              dot.setAttribute('aria-current', 'true');
             } else {
               dot.classList.remove('active');
-              dot.removeAttribute('aria-current');
             }
           });
+        }
+
+        updateProgressBar() {
+          const progressBar = document.getElementById('aboutGalleryProgressBar');
+          if (progressBar && this.slides.length > 0) {
+            const progress = ((this.currentSlide + 1) / this.slides.length) * 100;
+            progressBar.style.width = `${progress}%`;
+          }
+        }
+
+        updateCounter() {
+          const currentSlideEl = document.getElementById('aboutGalleryCurrentSlide');
+          const totalSlidesEl = document.getElementById('aboutGalleryTotalSlides');
+          
+          if (currentSlideEl) {
+            currentSlideEl.textContent = this.currentSlide + 1;
+          }
+          
+          if (totalSlidesEl) {
+            totalSlidesEl.textContent = this.slides.length;
+          }
         }
 
         startAutoSlide() {
@@ -1780,7 +2132,7 @@
           const dotsContainer = document.getElementById('aboutGallerySliderDots');
           if (dotsContainer) {
             dotsContainer.addEventListener('click', (e) => {
-              if (e.target.classList.contains('about-gallery-slider-dot')) {
+              if (e.target.classList.contains('slider-dot')) {
                 const slideIndex = parseInt(e.target.getAttribute('data-slide'));
                 this.goToSlide(slideIndex);
                 this.restartAutoSlide();
@@ -1789,7 +2141,7 @@
           }
 
           // Pause auto-slide on hover
-          const sliderWrapper = document.querySelector('.about-gallery-slider-wrapper');
+          const sliderWrapper = document.querySelector('.overview-slider-wrapper');
           if (sliderWrapper) {
             sliderWrapper.addEventListener('mouseenter', () => {
               this.isAutoPlaying = false;
@@ -1807,7 +2159,7 @@
             if (!gallerySection) return;
             
             const rect = gallerySection.getBoundingClientRect();
-            const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+            const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
             
             if (isInView) {
               if (e.key === 'ArrowLeft') {
@@ -1821,6 +2173,38 @@
               }
             }
           });
+
+          // Touch/swipe support
+          let touchStartX = 0;
+          let touchEndX = 0;
+          
+          const sliderContainer = document.querySelector('.slider-aspect-ratio');
+          if (sliderContainer) {
+            sliderContainer.addEventListener('touchstart', (e) => {
+              touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            sliderContainer.addEventListener('touchend', (e) => {
+              touchEndX = e.changedTouches[0].screenX;
+              this.handleSwipe(touchStartX, touchEndX);
+            });
+          }
+        }
+
+        handleSwipe(startX, endX) {
+          const swipeThreshold = 50;
+          const diff = startX - endX;
+          
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              // Swipe left - next slide
+              this.nextSlide();
+            } else {
+              // Swipe right - previous slide
+              this.prevSlide();
+            }
+            this.restartAutoSlide();
+          }
         }
 
         restartAutoSlide() {
@@ -1830,7 +2214,7 @@
       }
 
       // Initialize about page gallery slider
-      if (document.querySelector('.about-gallery-section')) {
+      if (document.querySelector('#aboutGallerySliderTrack')) {
         const aboutGallerySlider = new AboutGallerySlider();
         aboutGallerySlider.init();
       }
