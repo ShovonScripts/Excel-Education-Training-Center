@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Success Stories | Excel Education & Training Center</title>
+  <meta name="description" content="Read inspiring success stories from Excel Education students who mastered Japanese and are now building their futures in Japan. See their achievements and journey." />
+  <meta name="theme-color" content="#166534" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Page-specific CSS -->
+  <style>
+    /* ===== TESTIMONIALS HERO SECTION ===== */
+    #testimonials-hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      padding-top: calc(var(--marquee-height) + var(--navbar-height));
+      background: linear-gradient(135deg, 
+        rgba(22, 163, 74, 0.05) 0%, 
+        rgba(22, 163, 74, 0.12) 100%),
+        var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #testimonials-hero::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--primary-300) 0%, transparent 70%);
+      opacity: 0.12;
+      top: -300px;
+      right: -200px;
+      z-index: 0;
+    }
+
+    #testimonials-hero::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--primary-400) 0%, transparent 70%);
+      opacity: 0.08;
+      bottom: -200px;
+      left: -100px;
+      z-index: 0;
+    }
+
+    #testimonials-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #testimonials-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--primary-200);
+    }
+
+    #testimonials-hero .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary-500);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    #testimonials-hero h1.display-1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    #testimonials-hero .hero-subtitle {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== SUCCESS STATS SECTION ===== */
+    .success-stats-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .success-stats-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+
+    .success-stat-card {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .success-stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+      color: white;
+    }
+
+    .success-stat-label {
+      font-size: 1rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== FEATURED SUCCESS STORIES ===== */
+    .featured-stories-section {
+      padding: 80px 0;
+      background: var(--bg-primary);
+    }
+
+    .featured-story-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .featured-story-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-300);
+    }
+
+    .featured-story-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .featured-story-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-200);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-story-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .featured-story-achievement {
+      color: var(--primary-600);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .featured-story-content {
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .featured-story-quote {
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 1.1rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .featured-story-quote::before {
+      content: '"';
+      position: absolute;
+      left: 0;
+      top: -0.5rem;
+      font-size: 3rem;
+      color: var(--primary-300);
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .featured-story-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .story-stat {
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid var(--primary-200);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .story-stat i {
+      color: var(--primary-600);
+    }
+
+    .featured-story-journey {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .journey-title {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .journey-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .journey-step {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .journey-step i {
+      color: var(--primary-500);
+      flex-shrink: 0;
+    }
+
+    /* ===== MORE SUCCESS STORIES ===== */
+    .more-stories-section {
+      padding: 80px 0;
+      background: var(--bg-secondary);
+    }
+
+    .story-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .story-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-300);
+    }
+
+    .story-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 3px solid var(--primary-200);
+    }
+
+    .story-content {
+      margin-bottom: 1.5rem;
+    }
+
+    .story-quote {
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .story-author h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+
+    .story-achievement {
+      color: var(--primary-600);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* ===== SUCCESS GALLERY ===== */
+    .success-gallery-section {
+      padding: 80px 0;
+      background: var(--bg-primary);
+    }
+
+    .success-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      padding: 1.5rem;
+      color: white;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+
+    .gallery-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .gallery-description {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* ===== LIGHTBOX MODAL ===== */
+    .lightbox-modal .modal-content {
+      background: transparent;
+      border: none;
+    }
+
+    .lightbox-modal .modal-body {
+      padding: 0;
+    }
+
+    .lightbox-image {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: var(--radius-lg);
+    }
+
+    .lightbox-caption {
+      text-align: center;
+      color: white;
+      margin-top: 1rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      cursor: pointer;
+      z-index: 1060;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    /* ===== DARK MODE ADJUSTMENTS ===== */
+    [data-theme="dark"] #testimonials-hero .hero-badge {
+      background: rgba(86, 239, 172, 0.1);
+      color: var(--primary-300);
+      border-color: rgba(86, 239, 172, 0.2);
+    }
+
+    [data-theme="dark"] .featured-story-card,
+    [data-theme="dark"] .story-card {
+      background: var(--bg-surface);
+      border-color: var(--border-color);
+    }
+
+    [data-theme="dark"] .story-stat {
+      background: rgba(86, 239, 172, 0.1);
+      color: var(--primary-300);
+      border-color: rgba(86, 239, 172, 0.2);
+    }
+
+    [data-theme="dark"] .story-stat i {
+      color: var(--primary-400);
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      #testimonials-hero h1.display-1 {
+        font-size: 2.8rem;
+      }
+      
+      .success-stat-number {
+        font-size: 2.8rem;
+      }
+      
+      .featured-story-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .featured-story-avatar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #testimonials-hero {
+        min-height: 60vh;
+        padding-top: calc(var(--marquee-height) + 80px);
+      }
+      
+      #testimonials-hero h1.display-1 {
+        font-size: 2.2rem;
+      }
+      
+      #testimonials-hero .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .success-stats-section,
+      .featured-stories-section,
+      .more-stories-section,
+      .success-gallery-section {
+        padding: 60px 0;
+      }
+      
+      .featured-story-card,
+      .story-card {
+        padding: 1.75rem;
+      }
+      
+      .success-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+
+    @media (max-width: 576px) {
+      #testimonials-hero h1.display-1 {
+        font-size: 2rem;
+      }
+      
+      .success-stat-number {
+        font-size: 2.5rem;
+      }
+      
+      .featured-story-stats {
+        flex-direction: column;
+      }
+      
+      .success-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Excel Education Announcement">
+    <a href="contact.html" title="Start Your Japanese Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <span>Success Stories: 2,500+ Students Achieved Their Japan Dreams | Read Their Inspiring Journeys</span>
+          <span>98% Success Rate in JLPT/NAT Exams | 1,800+ Students Now in Japan</span>
+          <span>From Zero to Japanese Proficient in Just 6 Months | See Student Transformations</span>
+          <span>Book Your Success Story: Call +880 1974-142455 | +880 1745-715127</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Excel Education Home">
+        <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html" data-en="Courses" data-ja="コース">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-japan.html" data-en="Why Japan" data-ja="日本について">Why Japan</a></li>
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Our Process" data-ja="プロセス">Our Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="testimonials.html" data-en="Success Stories" data-ja="成功事例">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="contact.html" class="nav-highlight" data-en="Enroll Now" data-ja="申し込む">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="testimonials-hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <div class="hero-badge animate-on-scroll" data-en="Real Student Success" data-ja="実際の学生の成功">
+            <span class="dot"></span>
+            <span>Real Student Success</span>
+          </div>
+
+          <h1 class="display-1 mb-4 animate-on-scroll">
+            <span data-en="Student <span class='text-gradient'>Success Stories</span>" 
+                  data-ja="学生の<span class='text-gradient'>成功事例</span>">Student <span class="text-gradient">Success Stories</span></span>
+          </h1>
+
+          <p class="hero-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Read inspiring stories from our students who started with zero Japanese knowledge and are now building successful lives in Japan. Their journeys prove our methodology works."
+             data-ja="ゼロの日本語知識から始め、現在日本で成功した生活を築いている私たちの学生からの感動的なストーリーをお読みください。彼らの旅は私たちの方法論が機能することを証明しています。">
+            Read inspiring stories from our students who started with zero Japanese knowledge and are now building successful lives in Japan. Their journeys prove our methodology works.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center mb-4 animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="#featured-stories" class="btn btn-primary">
+              <i class="fas fa-star me-2"></i> <span data-en="Featured Stories" data-ja="特集ストーリー">Featured Stories</span>
+            </a>
+            <a href="#success-gallery" class="btn btn-secondary">
+              <i class="fas fa-images me-2"></i> <span data-en="View Gallery" data-ja="ギャラリーを見る">View Gallery</span>
+            </a>
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fas fa-user-plus me-2"></i> <span data-en="Start Your Story" data-ja="あなたの物語を始める">Start Your Story</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stats -->
+  <section class="success-stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-6 animate-on-scroll">
+          <div class="success-stat-card">
+            <div class="success-stat-number" data-count="2500" data-suffix="+">0+</div>
+            <div class="success-stat-label" data-en="Students Trained" data-ja="研修学生数">Students Trained</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="success-stat-card">
+            <div class="success-stat-number" data-count="98" data-suffix="%">0%</div>
+            <div class="success-stat-label" data-en="Success Rate" data-ja="成功率">Success Rate</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="success-stat-card">
+            <div class="success-stat-number" data-count="1800" data-suffix="+">0+</div>
+            <div class="success-stat-label" data-en="Students in Japan" data-ja="日本在住学生数">Students in Japan</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6 animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="success-stat-card">
+            <div class="success-stat-number" data-count="500" data-suffix="+">0+</div>
+            <div class="success-stat-label" data-en="Visa Success" data-ja="ビザ成功数">Visa Success</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Success Stories -->
+  <section class="featured-stories-section" id="featured-stories">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Featured Success Stories" data-ja="特集成功事例">
+            Featured Success Stories
+          </h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Meet our star students who transformed their lives through Excel Education's Japanese language training and are now thriving in Japan."
+             data-ja="エクセル教育の日本語研修を通じて人生を変え、現在日本で活躍している私たちのスター学生をご紹介します。">
+            Meet our star students who transformed their lives through Excel Education's Japanese language training and are now thriving in Japan.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Featured Story 1 -->
+        <div class="col-lg-6 animate-on-scroll">
+          <div class="featured-story-card">
+            <div class="featured-story-header">
+              <img src="images/testimonials/student-ahmed.jpg" alt="Ahmed Rahman - From Zero to JLPT N5 in 3 Months" class="featured-story-avatar">
+              <div class="featured-story-info">
+                <h3 data-en="Ahmed Rahman" data-ja="アーメド・ラーマン">Ahmed Rahman</h3>
+                <div class="featured-story-achievement" data-en="JLPT N5 Certified | Now Working in Tokyo" data-ja="JLPT N5取得 | 現在東京で勤務">JLPT N5 Certified | Now Working in Tokyo</div>
+              </div>
+            </div>
+
+            <div class="featured-story-content">
+              <p class="featured-story-quote" 
+                 data-en="&quot;I came to Excel Education with zero Japanese knowledge. The disciplined 3-hour daily classes and focused offline environment helped me pass JLPT N5 in just 3 months. Now I'm working in Tokyo and living my Japan dream.&quot;"
+                 data-ja="「私はゼロの日本語知識でエクセル教育に来ました。規律ある1日3時間の授業と集中した対面環境のおかげで、わずか3ヶ月でJLPT N5に合格できました。今は東京で働き、日本の夢を実現しています。」">
+                "I came to Excel Education with zero Japanese knowledge. The disciplined 3-hour daily classes and focused offline environment helped me pass JLPT N5 in just 3 months. Now I'm working in Tokyo and living my Japan dream."
+              </p>
+            </div>
+
+            <div class="featured-story-stats">
+              <div class="story-stat">
+                <i class="fas fa-calendar-check"></i>
+                <span data-en="3 Months to N5" data-ja="N5まで3ヶ月">3 Months to N5</span>
+              </div>
+              <div class="story-stat">
+                <i class="fas fa-briefcase"></i>
+                <span data-en="Tokyo Job Placement" data-ja="東京就職">Tokyo Job Placement</span>
+              </div>
+              <div class="story-stat">
+                <i class="fas fa-graduation-cap"></i>
+                <span data-en="98% Exam Score" data-ja="試験98点">98% Exam Score</span>
+              </div>
+            </div>
+
+            <div class="featured-story-journey">
+              <div class="journey-title" data-en="Journey Timeline" data-ja="旅のタイムライン">Journey Timeline</div>
+              <div class="journey-steps">
+                <div class="journey-step">
+                  <i class="fas fa-check-circle"></i>
+                  <span data-en="Joined Excel Education N5 Course" data-ja="エクセル教育N5コース参加">Joined Excel Education N5 Course</span>
+                </div>
+                <div class="journey-step">
+                  <i class="fas fa-check-circle"></i>
+                  <span data-en="Passed JLPT N5 in 3 Months" data-ja="3ヶ月でJLPT N5合格">Passed JLPT N5 in 3 Months</span>
+                </div>
+                <div class="journey-step">
+                  <i class="fas fa-check-circle"></i>
+                  <span data-en="Got Japan Student Visa" data-ja="日本学生ビザ取得">Got Japan Student Visa</span>
+                </div>
+                <div class="journey-step">
+                  <i class="fas fa-check-circle"></i>
+                  <span data-en="Working in Tokyo Company" data-ja="東京企業で勤務">Working in Tokyo Company</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Story 2 -->
+        <div class="col-lg-6 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="featured-story-card">
+            <div class="featured-story-header">
+              <img src="images/testimonials/student-sabrina.jpg" alt="Sabrina Khan - Now Studying at Osaka University" class="featured-story-avatar">
+              <div class="featured-story-info">
+                <h3 data-en="Sabrina Khan" data-ja="サブリナ・カーン">Sabrina Khan</h3>
+                <div class="featured-story-achievement" data-en="Osaka University Student | JLPT N4 Certified" data-ja="大阪大学学生 | JLPT N4取得">Osaka University Student | JLPT N4 Certified</div>
+              </div>
+            </div>
+
+            <div class="featured-story-content">
+              <p class="featured-story-quote"
+                 data-en="&quot;The intensive 6-day/week schedule and AC classrooms made learning enjoyable. I completed both N5 and N4 levels in 6 months, got my student visa, and now I'm studying at Osaka University. Excel Education's visa guidance was exceptional.&quot;"
+                 data-ja="「週6日の集中スケジュールと空調教室により、学習が楽しくなりました。6ヶ月でN5とN4の両方のレベルを完了し、学生ビザを取得し、現在大阪大学で学んでいます。エクセル教育のビザガイダンスは卓越していました。」">
+                "The intensive 6-day/week schedule and AC classrooms made learning enjoyable. I completed both N5 and N4 levels in 6 months, got my student visa, and now I'm studying at Osaka University. Excel Education's visa guidance was exceptional."
+              </p>
+            </div>
+
+            <div class="featured-story-stats">
+              <div class="story-stat">
+                <i class="fas fa-calendar-check"></i>
+                <span data-en="6 Months N5 to N4" data-ja="N5からN4まで6ヶ月">6 Months N5 to N4</span>
+              </div>
+              <div class="story-stat">
+                <i class="fas fa-university"></i>
+                <span data-en="Osaka University" data-ja="大阪大学">Osaka University</span>
+              </div>
+              <div class="story-stat">
+                <i class="fas fa-award"></i>
+                <span data-en="Scholarship Winner" data-ja="奨学金受給">Scholarship Winner</span>
+              </div>
+            </div>
+
+            <div class="featured-story-journey">
+              <div class="journey-title" data-en="Journey Timeline" data-ja="旅のタイムライン">Journey Timeline</div>
+              <div class="journey-steps">
+                <div class="journey-step">
+                  <i class="fas fa-check-circle"></i>
+                  <span data-en="Started N5 Course at Excel Education" data-ja="エクセル教育でN5コース開始">Started N5 Course at Excel Education</span>
+                </div>
+                <div class="journey-step">
+                  <i class="fas fa-check-circle"></i>
+                  <span data-en="Completed N4 in 6 Months" data-ja="6ヶ月でN4完了">Completed N4 in 6 Months</span>
+                </div>
+                <div class="journey-step">
+                  <i class="fas fa-check-circle"></i>
+                  <span data-en="Got Osaka University Admission" data-ja="大阪大学入学許可取得">Got Osaka University Admission</span>
+                </div>
+                <div class="journey-step">
+                  <i class="fas fa-check-circle"></i>
+                  <span data-en="Received MEXT Scholarship" data-ja="MEXT奨学金受給">Received MEXT Scholarship</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Success Stories -->
+  <section class="more-stories-section" id="more-stories">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="More Success Stories" data-ja="さらに多くの成功事例">
+            More Success Stories
+          </h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Hear from more students who transformed their lives through our structured Japanese language training program."
+             data-ja="私たちの体系的な日本語研修プログラムを通じて人生を変えたさらに多くの学生からの声をお聞きください。">
+            Hear from more students who transformed their lives through our structured Japanese language training program.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Story 1 -->
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="story-card">
+            <img src="images/testimonials/student-raju.jpg" alt="Raju Ahmed - Working in Yokohama" class="story-avatar">
+            <div class="story-content">
+              <p class="story-quote"
+                 data-en="&quot;From zero Japanese to conversational fluency in 6 months. The structured curriculum and expert teachers made all the difference. Now I'm happily settled in Yokohama.&quot;"
+                 data-ja="「ゼロの日本語から6ヶ月で会話レベルの流暢さに。体系的なカリキュラムと専門家の教師がすべてを変えました。今は横浜で幸せに暮らしています。」">
+                "From zero Japanese to conversational fluency in 6 months. The structured curriculum and expert teachers made all the difference. Now I'm happily settled in Yokohama."
+              </p>
+              <div class="story-author">
+                <h4 data-en="Raju Ahmed" data-ja="ラジュ・アーメド">Raju Ahmed</h4>
+                <div class="story-achievement" data-en="Yokohama, Japan" data-ja="日本・横浜">Yokohama, Japan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="story-card">
+            <img src="images/testimonials/student-tania.jpg" alt="Tania Islam - Kyoto Student" class="story-avatar">
+            <div class="story-content">
+              <p class="story-quote"
+                 data-en="&quot;Excel Education's daily practice sessions built my confidence. I passed NAT-TEST and now study in Kyoto. Their visa process guidance was flawless.&quot;"
+                 data-ja="「エクセル教育の毎日の練習セッションで自信がつきました。NAT-TESTに合格し、現在京都で学んでいます。彼らのビザプロセスガイダンスは完璧でした。」">
+                "Excel Education's daily practice sessions built my confidence. I passed NAT-TEST and now study in Kyoto. Their visa process guidance was flawless."
+              </p>
+              <div class="story-author">
+                <h4 data-en="Tania Islam" data-ja="タニア・イスラム">Tania Islam</h4>
+                <div class="story-achievement" data-en="Kyoto Institute of Technology" data-ja="京都工業大学">Kyoto Institute of Technology</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="story-card">
+            <img src="images/testimonials/student-kamal.jpg" alt="Kamal Hossain - N4 Success" class="story-avatar">
+            <div class="story-content">
+              <p class="story-quote"
+                 data-en="&quot;The mock tests and exam strategies were incredibly helpful. I cleared N4 with 92% and got my visa in first attempt. Thank you Excel Education!&quot;"
+                 data-ja="「模擬試験と試験戦略は非常に役立ちました。N4を92％で合格し、初回でビザを取得できました。エクセル教育に感謝します！」">
+                "The mock tests and exam strategies were incredibly helpful. I cleared N4 with 92% and got my visa in first attempt. Thank you Excel Education!"
+              </p>
+              <div class="story-author">
+                <h4 data-en="Kamal Hossain" data-ja="カマル・ホサイン">Kamal Hossain</h4>
+                <div class="story-achievement" data-en="JLPT N4 | Nagoya" data-ja="JLPT N4 | 名古屋">JLPT N4 | Nagoya</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 4 -->
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="story-card">
+            <img src="images/testimonials/student-marina.jpg" alt="Marina Akter - Working Student" class="story-avatar">
+            <div class="story-content">
+              <p class="story-quote"
+                 data-en="&quot;Balancing work and study in Japan became easy after Excel Education's training. Their real-life conversation practice prepared me perfectly.&quot;"
+                 data-ja="「エクセル教育の研修後、日本での仕事と学業の両立が簡単になりました。彼らの実生活会話練習が完璧に私を準備してくれました。」">
+                "Balancing work and study in Japan became easy after Excel Education's training. Their real-life conversation practice prepared me perfectly."
+              </p>
+              <div class="story-author">
+                <h4 data-en="Marina Akter" data-ja="マリナ・アクター">Marina Akter</h4>
+                <div class="story-achievement" data-en="Fukuoka | Part-time + Study" data-ja="福岡 | アルバイト＋学習">Fukuoka | Part-time + Study</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 5 -->
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="story-card">
+            <img src="images/testimonials/student-sakib.jpg" alt="Sakib Hasan - Tokyo IT Professional" class="story-avatar">
+            <div class="story-content">
+              <p class="story-quote"
+                 data-en="&quot;Coming from IT background, I needed Japanese for work. Excel Education's focused approach helped me achieve business-level Japanese in 8 months.&quot;"
+                 data-ja="「ITバックグラウンドから、仕事で日本語が必要でした。エクセル教育の重点的なアプローチにより、8ヶ月でビジネスレベルの日本語を達成できました。」">
+                "Coming from IT background, I needed Japanese for work. Excel Education's focused approach helped me achieve business-level Japanese in 8 months."
+              </p>
+              <div class="story-author">
+                <h4 data-en="Sakib Hasan" data-ja="サキブ・ハサン">Sakib Hasan</h4>
+                <div class="story-achievement" data-en="IT Professional, Tokyo" data-ja="IT専門職、東京">IT Professional, Tokyo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 6 -->
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="story-card">
+            <img src="images/testimonials/student-nusrat.jpg" alt="Nusrat Jahan - Sapporo Success" class="story-avatar">
+            <div class="story-content">
+              <p class="story-quote"
+                 data-en="&quot;As a female student, I was nervous about Japan. But Excel Education's comprehensive preparation and cultural training made my transition smooth.&quot;"
+                 data-ja="「女性学生として、日本について緊張していました。しかしエクセル教育の包括的な準備と文化トレーニングにより、移行がスムーズになりました。」">
+                "As a female student, I was nervous about Japan. But Excel Education's comprehensive preparation and cultural training made my transition smooth."
+              </p>
+              <div class="story-author">
+                <h4 data-en="Nusrat Jahan" data-ja="ヌスラット・ジャハン">Nusrat Jahan</h4>
+                <div class="story-achievement" data-en="Sapporo Medical University" data-ja="札幌医科大学">Sapporo Medical University</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Gallery -->
+  <section class="success-gallery-section" id="success-gallery">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Student Success Gallery" data-ja="学生成功ギャラリー">
+            Student Success Gallery
+          </h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Visual moments from our students' journeys - from classroom learning to life in Japan."
+             data-ja="私たちの学生の旅の視覚的な瞬間 - 教室での学習から日本での生活まで。">
+            Visual moments from our students' journeys - from classroom learning to life in Japan.
+          </p>
+        </div>
+      </div>
+
+      <div class="success-gallery-grid">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item animate-on-scroll" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="images/gallery/graduation-ceremony.jpg" data-title="JLPT Certificate Award Ceremony" data-description="Our students receiving JLPT certificates after successful completion">
+          <img src="images/gallery/graduation-ceremony.jpg" alt="JLPT Certificate Award Ceremony" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="gallery-title" data-en="JLPT Certificate Award" data-ja="JLPT認定書授与">JLPT Certificate Award</div>
+            <p class="gallery-description" data-en="Students receiving their JLPT certificates" data-ja="JLPT認定書を受け取る学生たち">Students receiving their JLPT certificates</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item animate-on-scroll" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="images/gallery/classroom-session.jpg" data-title="Interactive Classroom Session" data-description="Students actively participating in Japanese language class">
+          <img src="images/gallery/classroom-session.jpg" alt="Interactive Classroom Session" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="gallery-title" data-en="Classroom Learning" data-ja="教室での学習">Classroom Learning</div>
+            <p class="gallery-description" data-en="Active participation in Japanese class" data-ja="日本語クラスへの積極的な参加">Active participation in Japanese class</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item animate-on-scroll" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="images/gallery/visa-success.jpg" data-title="Visa Success Celebration" data-description="Students celebrating their Japan visa approval">
+          <img src="images/gallery/visa-success.jpg" alt="Visa Success Celebration" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="gallery-title" data-en="Visa Success" data-ja="ビザ成功">Visa Success</div>
+            <p class="gallery-description" data-en="Celebrating Japan visa approvals" data-ja="日本ビザ承認のお祝い">Celebrating Japan visa approvals</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item animate-on-scroll" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="images/gallery/cultural-event.jpg" data-title="Japanese Cultural Event" data-description="Students experiencing Japanese culture through traditional events">
+          <img src="images/gallery/cultural-event.jpg" alt="Japanese Cultural Event" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="gallery-title" data-en="Cultural Experience" data-ja="文化体験">Cultural Experience</div>
+            <p class="gallery-description" data-en="Japanese traditional culture event" data-ja="日本の伝統文化イベント">Japanese traditional culture event</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="gallery-item animate-on-scroll" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="images/gallery/exam-preparation.jpg" data-title="JLPT Exam Preparation" data-description="Students practicing for JLPT examinations">
+          <img src="images/gallery/exam-preparation.jpg" alt="JLPT Exam Preparation" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="gallery-title" data-en="Exam Preparation" data-ja="試験準備">Exam Preparation</div>
+            <p class="gallery-description" data-en="JLPT exam practice session" data-ja="JLPT試験練習セッション">JLPT exam practice session</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="gallery-item animate-on-scroll" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="images/gallery/alumni-meet.jpg" data-title="Alumni Meetup in Japan" data-description="Excel Education alumni gathering in Tokyo">
+          <img src="images/gallery/alumni-meet.jpg" alt="Alumni Meetup in Japan" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="gallery-title" data-en="Alumni Gathering" data-ja="同窓会">Alumni Gathering</div>
+            <p class="gallery-description" data-en="Our alumni meet in Tokyo" data-ja="東京での同窓生の集まり">Our alumni meet in Tokyo</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 7 -->
+        <div class="gallery-item animate-on-scroll" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="images/gallery/language-practice.jpg" data-title="Language Practice Session" data-description="Students practicing conversational Japanese">
+          <img src="images/gallery/language-practice.jpg" alt="Language Practice Session" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="gallery-title" data-en="Conversation Practice" data-ja="会話練習">Conversation Practice</div>
+            <p class="gallery-description" data-en="Real-life Japanese conversation" data-ja="実生活日本語会話">Real-life Japanese conversation</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 8 -->
+        <div class="gallery-item animate-on-scroll" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="images/gallery/success-wall.jpg" data-title="Success Wall of Fame" data-description="Our wall displaying student achievements and visa success">
+          <img src="images/gallery/success-wall.jpg" alt="Success Wall of Fame" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="gallery-title" data-en="Wall of Fame" data-ja="栄誉の壁">Wall of Fame</div>
+            <p class="gallery-description" data-en="Display of student achievements" data-ja="学生の成果の展示">Display of student achievements</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 360ms;">
+        <a href="contact.html" class="btn btn-primary px-5 py-3">
+          <i class="fas fa-camera me-2"></i> <span data-en="Share Your Success Story" data-ja="あなたの成功事例を共有">Share Your Success Story</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta" id="start-your-journey">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2 class="cta-title" data-en="Ready to Write Your Success Story?" data-ja="あなたの成功事例を書く準備はできていますか？">Ready to Write Your Success Story?</h2>
+        <p class="cta-subtitle" 
+           data-en="Join thousands of successful students who transformed their lives through Excel Education. Start your Japanese language journey today and become our next success story."
+           data-ja="エクセル教育を通じて人生を変えた何千人もの成功した学生に加わりましょう。今日からあなたの日本語の旅を始め、私たちの次の成功事例になりましょう。">
+          Join thousands of successful students who transformed their lives through Excel Education. Start your Japanese language journey today and become our next success story.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Free Consultation" data-ja="無料相談を予約">Book Free Consultation</span>
+          </a>
+          <a href="tel:+8801745715127" class="btn btn-outline-light px-5 py-3">
+            <i class="fas fa-phone me-2"></i> <span data-en="Call Now: +880 1745-715127" data-ja="今すぐ電話: +880 1745-715127">Call Now: +880 1745-715127</span>
+          </a>
+        </div>
+
+        <p class="mt-4 opacity-75">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          <span data-en="Excel Education & Training Center | Kajla, Jatrabari, Dhaka"
+                data-ja="エクセル教育トレーニングセンター | カジュラ、ジャトラバリ、ダッカ">
+            Excel Education & Training Center | Kajla, Jatrabari, Dhaka
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade lightbox-modal" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <button type="button" class="lightbox-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body">
+          <img id="lightboxImage" src="" alt="" class="lightbox-image">
+          <div class="lightbox-caption">
+            <h4 id="lightboxTitle"></h4>
+            <p id="lightboxDescription"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+          </div>
+          <p class="footer-description" 
+             data-en="Excel Education & Training Center has transformed 2,500+ students' lives through structured Japanese language training. Our success stories prove our commitment to excellence in language education and visa guidance."
+             data-ja="エクセル教育トレーニングセンターは、体系的な日本語研修を通じて2,500人以上の学生の人生を変えてきました。私たちの成功事例は、言語教育とビザガイダンスにおける卓越性への取り組みを証明しています。">
+            Excel Education & Training Center has transformed 2,500+ students' lives through structured Japanese language training. Our success stories prove our commitment to excellence in language education and visa guidance.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="courses.html" class="footer-link" data-en="Courses" data-ja="コース">Courses</a>
+          <a href="why-japan.html" class="footer-link" data-en="Why Japan" data-ja="日本について">Why Japan</a>
+          <a href="process.html" class="footer-link" data-en="Our Process" data-ja="プロセス">Our Process</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="testimonials.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="contact.html" class="footer-link" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Success Resources" data-ja="成功リソース">Success Resources</h5>
+          <a href="#featured-stories" class="footer-link" data-en="Featured Stories" data-ja="特集ストーリー">Featured Stories</a>
+          <a href="#more-stories" class="footer-link" data-en="More Testimonials" data-ja="その他の推薦文">More Testimonials</a>
+          <a href="#success-gallery" class="footer-link" data-en="Success Gallery" data-ja="成功ギャラリー">Success Gallery</a>
+          <a href="courses.html" class="footer-link" data-en="Course Details" data-ja="コース詳細">Course Details</a>
+          <a href="process.html" class="footer-link" data-en="Visa Process" data-ja="ビザプロセス">Visa Process</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Success Team" data-ja="サクセスチームに連絡">Contact Success Team</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Center Location" data-ja="センター所在地">Center Location</div>
+                <div class="text-tertiary">Kajla, Jatrabari, Dhaka</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Visit Hours" data-ja="訪問時間">Visit Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Success Hotline" data-ja="サクセスホットライン">Success Hotline</div>
+                <a href="tel:+8801745715127" class="footer-link">+880 1745-715127</a>
+                <a href="tel:+8801974142455" class="footer-link">+880 1974-142455</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Excel Education & Training Center. All rights reserved. Success stories shared with student consent."
+           data-ja="© <span id='currentYear'></span> エクセル教育トレーニングセンター。無断複写・転載を禁じます。成功事例は学生の同意を得て共有されています。">
+          © <span id="currentYear"></span> Excel Education & Training Center. All rights reserved. Success stories shared with student consent.
+        </p>
+        <div class="footer-legal">
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // ======================
+    // PAGE-SPECIFIC JAVASCRIPT
+    // ======================
+
+    class TestimonialsPage {
+      constructor() {
+        this.lightboxModal = document.getElementById('lightboxModal');
+        this.initLightbox();
+        this.initPageSpecificFeatures();
+      }
+
+      initLightbox() {
+        if (this.lightboxModal) {
+          this.lightboxModal.addEventListener('show.bs.modal', (event) => {
+            const button = event.relatedTarget;
+            const imageSrc = button.getAttribute('data-image');
+            const title = button.getAttribute('data-title');
+            const description = button.getAttribute('data-description');
+
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxDescription = document.getElementById('lightboxDescription');
+
+            if (lightboxImage) lightboxImage.src = imageSrc;
+            if (lightboxTitle) lightboxTitle.textContent = title;
+            if (lightboxDescription) lightboxDescription.textContent = description;
+          });
+        }
+      }
+
+      initPageSpecificFeatures() {
+        this.initSuccessCounters();
+        this.initGalleryHover();
+        this.initScrollAnimations();
+      }
+
+      initSuccessCounters() {
+        const counters = document.querySelectorAll('.success-stat-number');
+        let counterStarted = false;
+
+        const animateCounter = () => {
+          const speed = 200;
+
+          counters.forEach(counter => {
+            const target = Number(counter.getAttribute('data-count') || 0);
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const currentText = counter.textContent;
+            const current = Number(currentText.replace(/[^0-9]/g, '') || 0);
+            const increment = target / speed;
+
+            if (current < target) {
+              const newValue = Math.ceil(current + increment);
+              counter.textContent = newValue + suffix;
+            } else {
+              counter.textContent = target + suffix;
+            }
+          });
+
+          const stillCounting = [...counters].some(c => {
+            const t = Number(c.getAttribute('data-count') || 0);
+            const v = Number(c.textContent.replace(/[^0-9]/g, '') || 0);
+            return v < t;
+          });
+
+          if (stillCounting) {
+            requestAnimationFrame(animateCounter);
+          }
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !counterStarted) {
+              counterStarted = true;
+              animateCounter();
+            }
+          });
+        }, { threshold: 0.3 });
+
+        const statsSection = document.querySelector('.success-stats-section');
+        if (statsSection) statsObserver.observe(statsSection);
+      }
+
+      initGalleryHover() {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+          item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateY(-8px)';
+          });
+
+          item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translateY(0)';
+          });
+        });
+      }
+
+      initScrollAnimations() {
+        const observerOptions = { 
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+
+        const animateEls = document.querySelectorAll('.animate-on-scroll');
+        animateEls.forEach(el => observer.observe(el));
+      }
+    }
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      new TestimonialsPage();
+      
+      // Set current year in footer
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>

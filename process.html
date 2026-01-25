@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Admission Process | Excel Education & Training Center</title>
+  <meta name="description" content="Complete step-by-step admission process for studying in Japan. From initial consultation to visa approval - your roadmap to Japanese education success." />
+  <meta name="theme-color" content="#166534" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Page-specific CSS -->
+  <style>
+    /* ===== HERO SECTION ===== */
+    #process-hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      padding-top: calc(var(--marquee-height) + var(--navbar-height));
+      background: linear-gradient(135deg, 
+        rgba(22, 163, 74, 0.03) 0%, 
+        rgba(22, 163, 74, 0.08) 100%),
+        var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #process-hero::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--primary-300) 0%, transparent 70%);
+      opacity: 0.15;
+      top: -300px;
+      right: -200px;
+      z-index: 0;
+    }
+
+    #process-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #process-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--primary-200);
+    }
+
+    #process-hero .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary-500);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    #process-hero h1.display-1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    #process-hero .hero-subtitle {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== 7-STEP PROCESS SECTION ===== */
+    .process-steps-section {
+      padding: 100px 0;
+      background: var(--bg-primary);
+      position: relative;
+    }
+
+    .process-steps-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--primary-300), 
+        transparent);
+    }
+
+    .process-step-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      height: 100%;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-300);
+    }
+
+    .process-step-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary-500), var(--primary-700));
+    }
+
+    .step-number {
+      position: absolute;
+      top: -15px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+      z-index: 2;
+    }
+
+    .process-step-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .process-step-card h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: var(--primary-500);
+      border-radius: 50%;
+    }
+
+    .process-step-card p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .step-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 1rem;
+    }
+
+    .step-badge {
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid var(--primary-200);
+    }
+
+    .success-rate-banner {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      margin-top: 4rem;
+      color: white;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .success-rate-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 20%);
+    }
+
+    .stat-number-large {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label-large {
+      font-size: 1rem;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+
+    /* ===== TIMELINE SECTION ===== */
+    .timeline-section {
+      padding: 100px 0;
+      background: var(--bg-secondary);
+    }
+
+    .timeline-intakes {
+      margin-top: 2rem;
+    }
+
+    .intake-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      height: 100%;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      transition: transform 0.3s ease;
+    }
+
+    .intake-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .intake-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .intake-card h4 i {
+      color: var(--primary-600);
+    }
+
+    .intake-timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .intake-timeline li {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-secondary);
+    }
+
+    .intake-timeline li:last-child {
+      border-bottom: none;
+    }
+
+    .intake-date {
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--primary-200);
+    }
+
+    /* ===== DOCUMENTS SECTION ===== */
+    .documents-section {
+      padding: 100px 0;
+      background: var(--bg-primary);
+    }
+
+    .document-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      height: 100%;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .document-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-300);
+    }
+
+    .document-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 20px rgba(22, 163, 74, 0.2);
+    }
+
+    .document-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .document-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-secondary);
+    }
+
+    .document-list li:last-child {
+      border-bottom: none;
+    }
+
+    .document-list li i {
+      color: var(--primary-500);
+      font-size: 0.9rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .document-service-banner {
+      background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      margin-top: 4rem;
+      border: 2px solid var(--primary-200);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .document-service-banner::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, var(--primary-100) 0%, transparent 70%);
+      opacity: 0.5;
+    }
+
+    .document-service-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .document-service-content h4 {
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .document-service-content p {
+      color: var(--text-secondary);
+      margin-bottom: 0;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      #process-hero h1.display-1 {
+        font-size: 2.8rem;
+      }
+      
+      #process-hero .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .process-step-card {
+        padding: 2rem;
+      }
+      
+      .stat-number-large {
+        font-size: 2.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #process-hero {
+        min-height: 60vh;
+        padding-top: calc(var(--marquee-height) + 80px);
+      }
+      
+      #process-hero h1.display-1 {
+        font-size: 2.3rem;
+      }
+      
+      .process-steps-section,
+      .timeline-section,
+      .documents-section {
+        padding: 60px 0;
+      }
+      
+      .success-rate-banner,
+      .document-service-banner {
+        padding: 2rem;
+      }
+      
+      .process-step-card,
+      .document-card {
+        padding: 1.5rem;
+      }
+      
+      .document-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      #process-hero h1.display-1 {
+        font-size: 2rem;
+      }
+      
+      #process-hero .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .step-badges {
+        gap: 6px;
+      }
+      
+      .step-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+      }
+      
+      .stat-number-large {
+        font-size: 2.2rem;
+      }
+      
+      .intake-card {
+        padding: 1.5rem;
+      }
+      
+      .document-service-banner .btn {
+        width: 100%;
+      }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* ===== DARK MODE ADJUSTMENTS ===== */
+    [data-theme="dark"] #process-hero .hero-badge {
+      background: rgba(86, 239, 172, 0.1);
+      color: var(--primary-300);
+      border-color: rgba(86, 239, 172, 0.2);
+    }
+
+    [data-theme="dark"] .process-step-card,
+    [data-theme="dark"] .intake-card,
+    [data-theme="dark"] .document-card {
+      background: var(--bg-surface);
+      border-color: var(--border-color);
+    }
+
+    [data-theme="dark"] .step-badge,
+    [data-theme="dark"] .intake-date {
+      background: rgba(86, 239, 172, 0.1);
+      color: var(--primary-300);
+      border-color: rgba(86, 239, 172, 0.2);
+    }
+
+    [data-theme="dark"] .document-service-banner {
+      background: linear-gradient(135deg, 
+        rgba(22, 163, 74, 0.05), 
+        rgba(22, 163, 74, 0.1));
+      border-color: rgba(22, 163, 74, 0.2);
+    }
+
+    [data-theme="dark"] .document-list li {
+      border-bottom-color: var(--border-light);
+    }
+
+    [data-theme="dark"] .timeline-row:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    [data-theme="dark"] .success-rate-banner {
+      background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+    }
+
+    [data-theme="dark"] .document-service-content h4 {
+      color: var(--text-primary);
+    }
+
+    [data-theme="dark"] .document-service-content p {
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Excel Education Announcement">
+    <a href="contact.html" title="Start Your Japanese Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <span>🎌 Admissions Open for April & October 2025 Intakes - Start Your Japanese Language Journey Today!</span>
+          <span>📚 Join Our Intensive 3-Month N5/N4 Japanese Courses - 15,000 BDT Only</span>
+          <span>✈️ Complete Japan Study Guidance - From Language Training to Visa Processing</span>
+          <span>📞 Call Now: +880 1745-715127 | Kajla, Jatrabari, Dhaka</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Excel Education Home">
+        <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html" data-en="Courses" data-ja="コース">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-japan.html" data-en="Why Japan" data-ja="日本について">Why Japan</a></li>
+          <li class="nav-item"><a class="nav-link active" href="process.html" data-en="Our Process" data-ja="プロセス">Our Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html" data-en="Success Stories" data-ja="成功事例">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="contact.html" class="nav-highlight" data-en="Enroll Now" data-ja="申し込む">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="process-hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="hero-badge animate-on-scroll" data-en="Your Roadmap to Japan" data-ja="日本へのロードマップ">
+            <span class="dot"></span>
+            <span>Your Roadmap to Japan</span>
+          </div>
+
+          <h1 class="display-1 mb-4 animate-on-scroll">
+            <span data-en="Our Admission <span class='text-gradient'>Process</span>" 
+                  data-ja="入学<span class='text-gradient'>プロセス</span>">Our Admission <span class="text-gradient">Process</span></span>
+          </h1>
+
+          <p class="hero-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Excel Education & Training Center follows a structured 7-step process that guides you from initial consultation to successful departure to Japan. Our proven methodology ensures 95%+ visa success rate for qualified candidates."
+             data-ja="エクセル教育トレーニングセンターは、初回相談から日本への成功した出発までを導く体系的な7ステッププロセスに従います。当社の実証された方法論により、資格のある候補者に対して95％以上のビザ成功率を確保します。">
+            Excel Education & Training Center follows a structured 7-step process that guides you from initial consultation to successful departure to Japan. Our proven methodology ensures 95%+ visa success rate for qualified candidates.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center mb-4 animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="#step-by-step" class="btn btn-primary">
+              <i class="fas fa-road me-2"></i> <span data-en="View 7-Step Process" data-ja="7ステッププロセスを見る">View 7-Step Process</span>
+            </a>
+            <a href="#documents" class="btn btn-secondary">
+              <i class="fas fa-file-alt me-2"></i> <span data-en="Required Documents" data-ja="必要な書類">Required Documents</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7-Step Process Section -->
+  <section class="process-steps-section" id="step-by-step">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="7-Step Success Process" data-ja="7ステップ成功プロセス">
+            7-Step Success Process
+          </h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Our structured approach ensures systematic progression from beginner to Japan-bound student. Each step builds upon the previous, creating a solid foundation for your success."
+             data-ja="当社の体系的なアプローチは、初心者から日本行きの学生への体系的な進歩を保証します。各ステップは前のステップに基づいて構築され、成功のための強固な基盤を作ります。">
+            Our structured approach ensures systematic progression from beginner to Japan-bound student. Each step builds upon the previous, creating a solid foundation for your success.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-lg-6 animate-on-scroll">
+          <div class="process-step-card">
+            <div class="step-number">1</div>
+            <h4 data-en="Initial Consultation & Profile Assessment" data-ja="初回相談とプロファイル評価">Initial Consultation & Profile Assessment</h4>
+            <p data-en="We begin with a comprehensive counseling session to understand your academic background, career goals, and financial capacity. Our experts evaluate your eligibility for Japanese education."
+               data-ja="あなたの学歴、キャリア目標、財政能力を理解するための包括的なカウンセリングセッションから始めます。当社の専門家が日本教育の資格を評価します。">
+              We begin with a comprehensive counseling session to understand your academic background, career goals, and financial capacity. Our experts evaluate your eligibility for Japanese education.
+            </p>
+            <div class="step-badges">
+              <span class="step-badge" data-en="Free Session" data-ja="無料セッション">Free Session</span>
+              <span class="step-badge" data-en="Eligibility Check" data-ja="資格チェック">Eligibility Check</span>
+              <span class="step-badge" data-en="Career Guidance" data-ja="キャリアガイダンス">Career Guidance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-lg-6 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="process-step-card">
+            <div class="step-number">2</div>
+            <h4 data-en="Japanese Language Training (N5/N4)" data-ja="日本語研修 (N5/N4)">Japanese Language Training (N5/N4)</h4>
+            <p data-en="Enroll in our intensive 3-month Japanese language program. 3 hours daily, 6 days a week of structured classroom learning to achieve JLPT N5 or N4 certification - mandatory for Japan admission."
+               data-ja="当社の集中的な3ヶ月日本語プログラムに登録します。週6日、1日3時間の体系的な教室学習で、日本入学に必須のJLPT N5またはN4認定を取得します。">
+              Enroll in our intensive 3-month Japanese language program. 3 hours daily, 6 days a week of structured classroom learning to achieve JLPT N5 or N4 certification - mandatory for Japan admission.
+            </p>
+            <div class="step-badges">
+              <span class="step-badge" data-en="3 Months" data-ja="3ヶ月">3 Months</span>
+              <span class="step-badge" data-en="6 Days/Week" data-ja="週6日">6 Days/Week</span>
+              <span class="step-badge" data-en="3 Hours/Day" data-ja="3時間/日">3 Hours/Day</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-lg-6 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="process-step-card">
+            <div class="step-number">3</div>
+            <h4 data-en="School Selection & Application" data-ja="学校選択と出願">School Selection & Application</h4>
+            <p data-en="Based on your profile and Japanese level, we recommend suitable Japanese language schools in Tokyo, Osaka, Kyoto, etc. We handle complete application process including form filling and document submission."
+               data-ja="あなたのプロファイルと日本語レベルに基づいて、東京、大阪、京都などの適切な日本語学校を推薦します。フォーム記入と書類提出を含む完全な出願プロセスを扱います。">
+              Based on your profile and Japanese level, we recommend suitable Japanese language schools in Tokyo, Osaka, Kyoto, etc. We handle complete application process including form filling and document submission.
+            </p>
+            <div class="step-badges">
+              <span class="step-badge" data-en="School Matching" data-ja="学校マッチング">School Matching</span>
+              <span class="step-badge" data-en="Application Filing" data-ja="出願提出">Application Filing</span>
+              <span class="step-badge" data-en="Follow-up" data-ja="フォローアップ">Follow-up</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-lg-6 animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="process-step-card">
+            <div class="step-number">4</div>
+            <h4 data-en="Document Preparation & Verification" data-ja="書類準備と検証">Document Preparation & Verification</h4>
+            <p data-en="Our team assists in preparing all required documents: academic certificates, financial proofs, bank statements, sponsorship letters, etc. We ensure all documents meet Japanese immigration standards."
+               data-ja="当社のチームがすべての必要な書類の準備を支援します：学歴証明書、財政証明書、銀行明細書、スポンサーシップレターなど。すべての書類が日本の入国管理基準を満たすことを保証します。">
+              Our team assists in preparing all required documents: academic certificates, financial proofs, bank statements, sponsorship letters, etc. We ensure all documents meet Japanese immigration standards.
+            </p>
+            <div class="step-badges">
+              <span class="step-badge" data-en="Document Checklist" data-ja="書類チェックリスト">Document Checklist</span>
+              <span class="step-badge" data-en="Verification" data-ja="検証">Verification</span>
+              <span class="step-badge" data-en="Correction" data-ja="修正">Correction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="col-lg-6 animate-on-scroll" style="transition-delay: 480ms;">
+          <div class="process-step-card">
+            <div class="step-number">5</div>
+            <h4 data-en="Certificate of Eligibility (COE) Processing" data-ja="在留資格認定証明書 (COE) 処理">Certificate of Eligibility (COE) Processing</h4>
+            <p data-en="The Japanese school submits your COE application to Japanese Immigration. This takes 2-3 months. We coordinate with the school and keep you updated throughout the process."
+               data-ja="日本の学校が在留資格認定証明書申請を日本の入国管理局に提出します。これには2-3ヶ月かかります。学校と調整し、プロセス全体を通じて最新情報を提供します。">
+              The Japanese school submits your COE application to Japanese Immigration. This takes 2-3 months. We coordinate with the school and keep you updated throughout the process.
+            </p>
+            <div class="step-badges">
+              <span class="step-badge" data-en="2-3 Months" data-ja="2-3ヶ月">2-3 Months</span>
+              <span class="step-badge" data-en="Immigration Processing" data-ja="入国管理局処理">Immigration Processing</span>
+              <span class="step-badge" data-en="Regular Updates" data-ja="定期的更新">Regular Updates</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="col-lg-6 animate-on-scroll" style="transition-delay: 600ms;">
+          <div class="process-step-card">
+            <div class="step-number">6</div>
+            <h4 data-en="Visa Application at Japanese Embassy" data-ja="日本大使館でのビザ申請">Visa Application at Japanese Embassy</h4>
+            <p data-en="After receiving COE, we assist with visa application at Japanese Embassy in Dhaka. We help with appointment booking, document preparation, and interview preparation if required."
+               data-ja="在留資格認定証明書を受け取った後、ダッカの日本大使館でのビザ申請を支援します。アポイントメント予約、書類準備、必要に応じた面接準備を支援します。">
+              After receiving COE, we assist with visa application at Japanese Embassy in Dhaka. We help with appointment booking, document preparation, and interview preparation if required.
+            </p>
+            <div class="step-badges">
+              <span class="step-badge" data-en="Embassy Appointment" data-ja="大使館アポイント">Embassy Appointment</span>
+              <span class="step-badge" data-en="Visa Documentation" data-ja="ビザ書類">Visa Documentation</span>
+              <span class="step-badge" data-en="Final Submission" data-ja="最終提出">Final Submission</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7 (Full Width) -->
+      <div class="row mt-4">
+        <div class="col-12 animate-on-scroll" style="transition-delay: 720ms;">
+          <div class="process-step-card">
+            <div class="step-number">7</div>
+            <h4 data-en="Pre-Departure & Post-Arrival Support" data-ja="出発前と到着後サポート">Pre-Departure & Post-Arrival Support</h4>
+            <p data-en="We provide comprehensive pre-departure guidance including flight booking, accommodation, cultural orientation. Post-arrival support includes airport pickup, school registration, and initial settlement assistance."
+               data-ja="フライト予約、宿泊、文化オリエンテーションを含む包括的な出発前ガイダンスを提供します。到着後サポートには空港送迎、学校登録、初期定着支援が含まれます。">
+              We provide comprehensive pre-departure guidance including flight booking, accommodation, cultural orientation. Post-arrival support includes airport pickup, school registration, and initial settlement assistance.
+            </p>
+            <div class="step-badges">
+              <span class="step-badge" data-en="Flight & Accommodation" data-ja="フライトと宿泊">Flight & Accommodation</span>
+              <span class="step-badge" data-en="Cultural Training" data-ja="文化研修">Cultural Training</span>
+              <span class="step-badge" data-en="Settlement Support" data-ja="定着支援">Settlement Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Rate Banner -->
+      <div class="success-rate-banner animate-on-scroll" style="transition-delay: 840ms;">
+        <div class="row text-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="stat-number-large">95%+</div>
+            <div class="stat-label-large" data-en="Visa Success Rate" data-ja="ビザ成功率">Visa Success Rate</div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="stat-number-large">500+</div>
+            <div class="stat-label-large" data-en="Students Successfully Placed" data-ja="成功した学生配置">Students Successfully Placed</div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-number-large">100%</div>
+            <div class="stat-label-large" data-en="Document Accuracy" data-ja="書類正確性">Document Accuracy</div>
+          </div>
+        </div>
+        <p class="text-center mt-4 mb-0 opacity-90" data-en="Our proven process and attention to detail ensure maximum success rate for qualified candidates"
+           data-ja="当社の実証されたプロセスと細部への注意により、資格のある候補者の最大成功率を確保します">
+          Our proven process and attention to detail ensure maximum success rate for qualified candidates
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline-section" id="timeline">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Admission Timeline" data-ja="入学タイムライン">Admission Timeline</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Plan your Japan study journey with our structured intake timelines for April and October admissions."
+             data-ja="4月と10月入学のための体系的な入学タイムラインで日本留学の旅を計画してください。">
+            Plan your Japan study journey with our structured intake timelines for April and October admissions.
+          </p>
+        </div>
+      </div>
+
+      <div class="row timeline-intakes g-4">
+        <div class="col-md-6 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="intake-card">
+            <h4><i class="fas fa-calendar-alt"></i> <span data-en="April Intake Timeline" data-ja="4月入学タイムライン">April Intake Timeline</span></h4>
+            <ul class="intake-timeline">
+              <li>
+                <span data-en="Start Japanese Language Course" data-ja="日本語コース開始">Start Japanese Language Course</span>
+                <span class="intake-date" data-en="Aug-Sep" data-ja="8-9月">Aug-Sep</span>
+              </li>
+              <li>
+                <span data-en="School Application Deadline" data-ja="学校出願締切">School Application Deadline</span>
+                <span class="intake-date" data-en="Oct-Nov" data-ja="10-11月">Oct-Nov</span>
+              </li>
+              <li>
+                <span data-en="COE Processing Period" data-ja="COE処理期間">COE Processing Period</span>
+                <span class="intake-date" data-en="Dec-Feb" data-ja="12-2月">Dec-Feb</span>
+              </li>
+              <li>
+                <span data-en="Visa Application & Departure" data-ja="ビザ申請と出発">Visa Application & Departure</span>
+                <span class="intake-date" data-en="Mar" data-ja="3月">Mar</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="intake-card">
+            <h4><i class="fas fa-calendar-alt"></i> <span data-en="October Intake Timeline" data-ja="10月入学タイムライン">October Intake Timeline</span></h4>
+            <ul class="intake-timeline">
+              <li>
+                <span data-en="Start Japanese Language Course" data-ja="日本語コース開始">Start Japanese Language Course</span>
+                <span class="intake-date" data-en="Feb-Mar" data-ja="2-3月">Feb-Mar</span>
+              </li>
+              <li>
+                <span data-en="School Application Deadline" data-ja="学校出願締切">School Application Deadline</span>
+                <span class="intake-date" data-en="Apr-May" data-ja="4-5月">Apr-May</span>
+              </li>
+              <li>
+                <span data-en="COE Processing Period" data-ja="COE処理期間">COE Processing Period</span>
+                <span class="intake-date" data-en="Jun-Aug" data-ja="6-8月">Jun-Aug</span>
+              </li>
+              <li>
+                <span data-en="Visa Application & Departure" data-ja="ビザ申請と出発">Visa Application & Departure</span>
+                <span class="intake-date" data-en="Sep" data-ja="9月">Sep</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documents Section -->
+  <section class="documents-section" id="documents">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Required Documents Checklist" data-ja="必要な書類チェックリスト">Required Documents Checklist</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Complete document preparation is crucial for visa success. Here's everything you need for your Japan student visa application."
+             data-ja="完全な書類準備はビザ成功のために重要です。以下は日本学生ビザ申請に必要なすべてです。">
+            Complete document preparation is crucial for visa success. Here's everything you need for your Japan student visa application.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="bi bi-file-earmark-text"></i>
+            </div>
+            <h3 class="mb-4" data-en="Academic Documents" data-ja="学術書類">Academic Documents</h3>
+            <ul class="document-list">
+              <li><i class="fas fa-check"></i> <span data-en="SSC/O-Level Certificate & Transcript" data-ja="SSC/Oレベル証明書と成績証明書">SSC/O-Level Certificate & Transcript</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="HSC/A-Level Certificate & Transcript" data-ja="HSC/Aレベル証明書と成績証明書">HSC/A-Level Certificate & Transcript</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Bachelor's Degree (if applicable)" data-ja="学士号（該当する場合）">Bachelor's Degree (if applicable)</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="All academic mark sheets" data-ja="すべての学業成績表">All academic mark sheets</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="School/College Leaving Certificate" data-ja="学校/大学離学証明書">School/College Leaving Certificate</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="bi bi-bank"></i>
+            </div>
+            <h3 class="mb-4" data-en="Financial Documents" data-ja="財政書類">Financial Documents</h3>
+            <ul class="document-list">
+              <li><i class="fas fa-check"></i> <span data-en="Bank Statement (Last 6 Months)" data-ja="銀行明細書（過去6ヶ月）">Bank Statement (Last 6 Months)</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Bank Solvency Certificate" data-ja="銀行支払能力証明書">Bank Solvency Certificate</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Sponsor's Income Documents" data-ja="スポンサーの収入書類">Sponsor's Income Documents</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Tax Returns (Last 2-3 Years)" data-ja="納税申告書（過去2-3年）">Tax Returns (Last 2-3 Years)</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Sponsorship Letter (Notarized)" data-ja="スポンサーシップレター（公証済み）">Sponsorship Letter (Notarized)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="bi bi-person-badge"></i>
+            </div>
+            <h3 class="mb-4" data-en="Personal Documents" data-ja="個人書類">Personal Documents</h3>
+            <ul class="document-list">
+              <li><i class="fas fa-check"></i> <span data-en="Valid Passport (Minimum 2 Years)" data-ja="有効なパスポート（最低2年）">Valid Passport (Minimum 2 Years)</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Passport Size Photos (45mm x 35mm)" data-ja="パスポートサイズ写真（45mm x 35mm）">Passport Size Photos (45mm x 35mm)</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Birth Certificate" data-ja="出生証明書">Birth Certificate</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="National ID Card (NID)" data-ja="国民IDカード（NID）">National ID Card (NID)</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Japanese Language Certificate (N5/N4)" data-ja="日本語証明書（N5/N4）">Japanese Language Certificate (N5/N4)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Document Preparation Service -->
+      <div class="document-service-banner animate-on-scroll" style="transition-delay: 360ms;">
+        <div class="document-service-content">
+          <div class="row align-items-center">
+            <div class="col-lg-9">
+              <h4 class="mb-3" data-en="Professional Document Preparation Service" data-ja="プロフェッショナル書類準備サービス">Professional Document Preparation Service</h4>
+              <p class="mb-0" data-en="Our expert team provides complete document verification, correction, translation, and preparation to ensure 100% accuracy and compliance with Japanese immigration requirements."
+                 data-ja="当社の専門家チームは、100％の正確性と日本の入国管理要件への準拠を確保するための完全な書類検証、修正、翻訳、準備を提供します。">
+                Our expert team provides complete document verification, correction, translation, and preparation to ensure 100% accuracy and compliance with Japanese immigration requirements.
+              </p>
+            </div>
+            <div class="col-lg-3 text-lg-end mt-4 mt-lg-0">
+              <a href="contact.html" class="btn btn-primary px-4 py-3">
+                <i class="fas fa-file-contract me-2"></i> <span data-en="Get Support" data-ja="サポートを入手">Get Support</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section preview-section" id="faq">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Process FAQs" data-ja="プロセスFAQ">Process FAQs</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Answers to common questions about our admission process, timelines, and requirements."
+             data-ja="当社の入学プロセス、タイムライン、要件に関するよくある質問への回答。">
+            Answers to common questions about our admission process, timelines, and requirements.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="accordion" id="processFaqAccordion">
+            <!-- FAQ Items (same as before, but cleaned up) -->
+            <div class="accordion-item animate-on-scroll">
+              <h3 class="accordion-header" id="processFaqHeading1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#processFaqCollapse1" aria-expanded="false" aria-controls="processFaqCollapse1">
+                  <span data-en="When should I start the process for April/October intake?" data-ja="4月/10月入学のためのプロセスはいつ開始すべきですか？">
+                    When should I start the process for April/October intake?
+                  </span>
+                </button>
+              </h3>
+              <div id="processFaqCollapse1" class="accordion-collapse collapse" aria-labelledby="processFaqHeading1" data-bs-parent="#processFaqAccordion">
+                <div class="accordion-body">
+                  <p data-en="For April intake: Start in August-September of the previous year. For October intake: Start in February-March of the same year. This allows sufficient time for Japanese language training (3 months), document preparation, school applications (deadlines typically 5-6 months before intake), and visa processing."
+                     data-ja="4月入学の場合：前年の8-9月に開始します。10月入学の場合：同年の2-3月に開始します。これにより、日本語研修（3ヶ月）、書類準備、学校出願（締切は通常入学の5-6ヶ月前）、ビザ処理の十分な時間が確保できます。">
+                    For April intake: Start in August-September of the previous year. For October intake: Start in February-March of the same year. This allows sufficient time for Japanese language training (3 months), document preparation, school applications (deadlines typically 5-6 months before intake), and visa processing.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add remaining FAQ items here (same structure) -->
+            
+            <div class="accordion-item animate-on-scroll" style="transition-delay: 120ms;">
+              <h3 class="accordion-header" id="processFaqHeading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#processFaqCollapse2" aria-expanded="false" aria-controls="processFaqCollapse2">
+                  <span data-en="What is the minimum bank balance required?" data-ja="必要な最低銀行残高はいくらですか？">
+                    What is the minimum bank balance required?
+                  </span>
+                </button>
+              </h3>
+              <div id="processFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="processFaqHeading2" data-bs-parent="#processFaqAccordion">
+                <div class="accordion-body">
+                  <p data-en="You need to show approximately 15-20 lakh BDT in sponsor's bank account. This should cover tuition fees + living expenses for 1-2 years. The exact amount varies based on school fees and duration."
+                     data-ja="スポンサーの銀行口座に約15-20万BDTを示す必要があります。これは1-2年の授業料＋生活費をカバーするはずです。正確な金額は学校の授業料と期間によって異なります。">
+                    You need to show approximately 15-20 lakh BDT in sponsor's bank account. This should cover tuition fees + living expenses for 1-2 years. The exact amount varies based on school fees and duration.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 720ms;">
+            <a href="contact.html" class="btn btn-primary px-5 py-3">
+              <i class="fas fa-question-circle me-2"></i> <span data-en="More Questions? Book Free Consultation" data-ja="さらに質問がありますか？無料相談を予約">More Questions? Book Free Consultation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2 class="cta-title" data-en="Ready to Begin Your Japan Journey?" data-ja="日本への旅を始める準備はできていますか？">Ready to Begin Your Japan Journey?</h2>
+        <p class="cta-subtitle" 
+           data-en="Take the first step today. Book a free consultation with our Japan education experts and get your personalized roadmap to studying in Japan."
+           data-ja="今日最初の一歩を踏み出しましょう。日本の教育専門家との無料相談を予約し、日本留学のための個別ロードマップを入手してください。">
+          Take the first step today. Book a free consultation with our Japan education experts and get your personalized roadmap to studying in Japan.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Free Consultation" data-ja="無料相談を予約">Book Free Consultation</span>
+          </a>
+          <a href="tel:+8801745715127" class="btn btn-outline-light px-5 py-3">
+            <i class="fas fa-phone me-2"></i> <span data-en="Call Now: +880 1745-715127" data-ja="今すぐ電話: +880 1745-715127">Call Now: +880 1745-715127</span>
+          </a>
+        </div>
+
+        <p class="mt-4 opacity-75">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          <span data-en="Location: Kajla, Jatrabari, Dhaka | Office Time: Sat-Thu, 10:00 AM – 6:00 PM"
+                data-ja="所在地: カジュラ、ジャトラバリ、ダッカ | 営業時間: 土〜木、午前10時 – 午後6時">
+            Location: Kajla, Jatrabari, Dhaka | Office Time: Sat-Thu, 10:00 AM – 6:00 PM
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+          </div>
+          <p class="footer-description" 
+             data-en="Excel Education & Training Center is a premier Japanese language institute in Dhaka, offering intensive N5/N4 courses and Japan student visa guidance through structured offline classroom training in a disciplined, focused environment."
+             data-ja="エクセル教育トレーニングセンターはダッカの主要な日本語学校で、規律ある集中環境での体系的な対面教室研修を通じて、集中的なN5/N4コースと日本学生ビザガイダンスを提供しています。">
+            Excel Education & Training Center is a premier Japanese language institute in Dhaka,
+            offering intensive N5/N4 courses and Japan student visa guidance through structured
+            offline classroom training in a disciplined, focused environment.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="courses.html" class="footer-link" data-en="Courses" data-ja="コース">Courses</a>
+          <a href="why-japan.html" class="footer-link" data-en="Why Japan" data-ja="日本について">Why Japan</a>
+          <a href="process.html" class="footer-link" data-en="Our Process" data-ja="プロセス">Our Process</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="testimonials.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#step-by-step" class="footer-link" data-en="7-Step Process" data-ja="7ステッププロセス">7-Step Process</a>
+          <a href="#documents" class="footer-link" data-en="Document Checklist" data-ja="書類チェックリスト">Document Checklist</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Process Resources" data-ja="プロセスリソース">Process Resources</h5>
+          <a href="#timeline" class="footer-link" data-en="Process Timeline" data-ja="プロセスタイムライン">Process Timeline</a>
+          <a href="#documents" class="footer-link" data-en="Required Documents" data-ja="必要な書類">Required Documents</a>
+          <a href="#faq" class="footer-link" data-en="Process FAQs" data-ja="プロセスFAQ">Process FAQs</a>
+          <a href="courses.html#n5-course" class="footer-link" data-en="Japanese Language Course" data-ja="日本語コース">Japanese Language Course</a>
+          <a href="contact.html" class="footer-link" data-en="Start Application" data-ja="出願開始">Start Application</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Address" data-ja="住所">Address</div>
+                <div class="text-tertiary">Kajla, Jatrabari, Dhaka, Bangladesh</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone" data-ja="電話">Phone</div>
+                <a href="tel:+8801745715127" class="footer-link">+880 1745-715127</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Excel Education & Training Center. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エクセル教育トレーニングセンター。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Excel Education & Training Center. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize current year
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

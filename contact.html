@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Excel Education & Training Center</title>
+  <meta name="description" content="Contact Excel Education for Japanese language courses and Japan study visa guidance. Call our hotline, email, or visit our offices in Kajla, Jatrabari and Panthapath, Dhaka." />
+  <meta name="theme-color" content="#166534" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Page-specific CSS -->
+  <style>
+    /* ===== HERO SECTION ===== */
+    #contact-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding-top: calc(var(--marquee-height) + var(--navbar-height));
+      background: linear-gradient(135deg, 
+        rgba(22, 163, 74, 0.03) 0%, 
+        rgba(22, 163, 74, 0.08) 100%),
+        var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contact-hero::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--primary-300) 0%, transparent 70%);
+      opacity: 0.15;
+      top: -250px;
+      right: -150px;
+      z-index: 0;
+    }
+
+    #contact-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #contact-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--primary-200);
+    }
+
+    #contact-hero .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary-500);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    #contact-hero h1.display-1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    #contact-hero .hero-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== CONTACT INFO SECTION ===== */
+    .contact-info-section {
+      padding: 80px 0;
+      background: var(--bg-primary);
+    }
+
+    .contact-info-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      height: 100%;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .contact-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-300);
+    }
+
+    .contact-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 20px rgba(22, 163, 74, 0.2);
+    }
+
+    .contact-info-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .contact-info-card p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-info-card a {
+      color: var(--primary-600);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info-card a:hover {
+      color: var(--primary-700);
+      text-decoration: underline;
+    }
+
+    /* ===== CONTACT FORM SECTION ===== */
+    .contact-form-section {
+      padding: 80px 0;
+      background: var(--bg-secondary);
+    }
+
+    .contact-form-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .form-control, .form-select {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius-md);
+      transition: var(--transition-fast);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: var(--primary-500);
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+    }
+
+    .form-control::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .alert-success {
+      background-color: rgba(16, 185, 129, 0.1);
+      border-color: rgba(16, 185, 129, 0.2);
+      color: var(--success);
+      border-radius: var(--radius-md);
+    }
+
+    .alert-danger {
+      background-color: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.2);
+      color: var(--error);
+      border-radius: var(--radius-md);
+    }
+
+    /* ===== MAP SECTION ===== */
+    .map-section {
+      padding: 80px 0;
+      background: var(--bg-primary);
+    }
+
+    .map-container {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+      height: 400px;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      #contact-hero h1.display-1 {
+        font-size: 2.5rem;
+      }
+      
+      #contact-hero .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .contact-form-card {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #contact-hero {
+        min-height: 50vh;
+        padding-top: calc(var(--marquee-height) + 80px);
+      }
+      
+      #contact-hero h1.display-1 {
+        font-size: 2rem;
+      }
+      
+      .contact-info-section,
+      .contact-form-section,
+      .map-section {
+        padding: 60px 0;
+      }
+      
+      .contact-info-card,
+      .contact-form-card {
+        padding: 1.5rem;
+      }
+      
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      #contact-hero h1.display-1 {
+        font-size: 1.8rem;
+      }
+      
+      .contact-form-card .btn {
+        width: 100%;
+      }
+      
+      .map-container {
+        height: 300px;
+      }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* ===== DARK MODE ADJUSTMENTS ===== */
+    [data-theme="dark"] #contact-hero .hero-badge {
+      background: rgba(86, 239, 172, 0.1);
+      color: var(--primary-300);
+      border-color: rgba(86, 239, 172, 0.2);
+    }
+
+    [data-theme="dark"] .contact-info-card,
+    [data-theme="dark"] .contact-form-card {
+      background: var(--bg-surface);
+      border-color: var(--border-color);
+    }
+
+    [data-theme="dark"] .contact-info-card a {
+      color: var(--primary-400);
+    }
+
+    [data-theme="dark"] .contact-info-card a:hover {
+      color: var(--primary-300);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Excel Education Announcement">
+    <a href="contact.html" title="Start Your Japanese Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <span>📞 Call Our Hotline: +880 1974-142455 | +880 1745-715127 - Japanese Language Courses & Visa Guidance</span>
+          <span>🏢 Visit Our Offices: Kajla, Jatrabari & Panthapath, Dhaka | Saturday-Thursday, 10:00 AM – 6:00 PM</span>
+          <span>📧 Email: info@exceleducationbd.com | admissions@exceleducationbd.com</span>
+          <span>🎌 Admissions Open for April & October 2025 Intakes - Book Your Free Consultation Today!</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Excel Education Home">
+        <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html" data-en="Courses" data-ja="コース">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-japan.html" data-en="Why Japan" data-ja="日本について">Why Japan</a></li>
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Our Process" data-ja="プロセス">Our Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html" data-en="Success Stories" data-ja="成功事例">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="contact.html" class="nav-highlight" data-en="Enroll Now" data-ja="申し込む">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="contact-hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="hero-badge animate-on-scroll" data-en="Get In Touch Today" data-ja="今日お問い合わせください">
+            <span class="dot"></span>
+            <span>Get In Touch Today</span>
+          </div>
+
+          <h1 class="display-1 mb-4 animate-on-scroll">
+            <span data-en="Contact <span class='text-gradient'>Excel Education</span>" 
+                  data-ja="<span class='text-gradient'>エクセル教育</span>へお問い合わせ">Contact <span class="text-gradient">Excel Education</span></span>
+          </h1>
+
+          <p class="hero-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Ready to start your Japanese language journey? Contact us for course details, free consultation, or Japan visa guidance. Our team is here to help you succeed in Japan."
+             data-ja="日本語学習の旅を始める準備はできていますか？コース詳細、無料相談、日本ビザガイダンスについてお問い合わせください。私たちのチームはあなたの日本での成功を支援します。">
+            Ready to start your Japanese language journey? Contact us for course details, free consultation, or Japan visa guidance. Our team is here to help you succeed in Japan.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center mb-4 animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="#contact-form" class="btn btn-primary">
+              <i class="fas fa-envelope me-2"></i> <span data-en="Send Message" data-ja="メッセージを送信">Send Message</span>
+            </a>
+            <a href="tel:+8801974142455" class="btn btn-secondary">
+              <i class="fas fa-phone me-2"></i> <span data-en="Call Hotline" data-ja="ホットラインにお電話">Call Hotline</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="contact-info-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Contact Information" data-ja="連絡先情報">
+            Contact Information
+          </h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Reach out to us through any of these channels. We're available Saturday through Thursday, 10:00 AM to 6:00 PM."
+             data-ja="これらのチャネルのいずれかを通じてご連絡ください。土曜日から木曜日、午前10時から午後6時まで対応可能です。">
+            Reach out to us through any of these channels. We're available Saturday through Thursday, 10:00 AM to 6:00 PM.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Phone -->
+        <div class="col-md-4 animate-on-scroll">
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3 data-en="Phone & Hotline" data-ja="電話とホットライン">Phone & Hotline</h3>
+            <p data-en="Call us directly for immediate assistance with course enrollment, fees, or consultation."
+               data-ja="コース登録、料金、相談について直接お電話ください。">
+              Call us directly for immediate assistance with course enrollment, fees, or consultation.
+            </p>
+            <a href="tel:+8801974142455">+880 1974-142455</a>
+            <a href="tel:+8801745715127">+880 1745-715127</a>
+            <p class="text-tertiary small mt-3">
+              <i class="fas fa-clock me-1"></i>
+              <span data-en="Sat-Thu, 10:00 AM – 6:00 PM" data-ja="土〜木、午前10時 – 午後6時">Sat-Thu, 10:00 AM – 6:00 PM</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 data-en="Email Address" data-ja="メールアドレス">Email Address</h3>
+            <p data-en="Send us an email for detailed inquiries, document submissions, or scheduled consultations."
+               data-ja="詳細なお問い合わせ、書類提出、予約相談はメールでお送りください。">
+              Send us an email for detailed inquiries, document submissions, or scheduled consultations.
+            </p>
+            <a href="mailto:info@exceleducationbd.com">info@exceleducationbd.com</a>
+            <a href="mailto:admissions@exceleducationbd.com">admissions@exceleducationbd.com</a>
+            <p class="text-tertiary small mt-3">
+              <i class="fas fa-reply me-1"></i>
+              <span data-en="24-hour response time" data-ja="24時間以内の返信">24-hour response time</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Office -->
+        <div class="col-md-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 data-en="Office Locations" data-ja="オフィス所在地">Office Locations</h3>
+            <p data-en="Visit our offices for face-to-face consultation, course registration, or document submission."
+               data-ja="対面相談、コース登録、書類提出のためにお越しください。">
+              Visit our offices for face-to-face consultation, course registration, or document submission.
+            </p>
+            <p class="mb-2"><strong>Main Office:</strong><br>Kajla, Jatrabari, Dhaka</p>
+            <p><strong>Branch Office:</strong><br>Indira Road, Tejgaon, Dhaka 1215</p>
+            <p class="text-tertiary small mt-3">
+              <i class="fas fa-door-open me-1"></i>
+              <span data-en="Walk-in welcome" data-ja="飛び込み歓迎">Walk-in welcome</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form-section" id="contact-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="contact-form-card animate-on-scroll">
+            <h2 class="display-3 mb-4" data-en="Send Us a Message" data-ja="メッセージを送信">Send Us a Message</h2>
+            <p class="mb-4" data-en="Fill out the form below and our team will contact you within 24 hours to discuss your Japanese language learning goals and visa requirements."
+               data-ja="以下のフォームに記入してください。24時間以内にチームが日本語学習の目標とビザ要件についてご連絡いたします。">
+              Fill out the form below and our team will contact you within 24 hours to discuss your Japanese language learning goals and visa requirements.
+            </p>
+            
+            <form id="contactForm" novalidate>
+              <!-- Form Status Messages -->
+              <div id="formSuccess" class="alert alert-success d-none mb-4" role="alert">
+                <i class="fas fa-check-circle me-2"></i>
+                <span data-en="Thank you! Your message has been sent successfully. We will contact you within 24 hours."
+                      data-ja="ありがとうございます！メッセージは正常に送信されました。24時間以内にご連絡いたします。">
+                  Thank you! Your message has been sent successfully. We will contact you within 24 hours.
+                </span>
+              </div>
+              
+              <div id="formError" class="alert alert-danger d-none mb-4" role="alert">
+                <i class="fas fa-exclamation-circle me-2"></i>
+                <span data-en="There was an error submitting your form. Please try again or call us directly."
+                      data-ja="フォームの送信中にエラーが発生しました。もう一度お試しいただくか、直接お電話ください。">
+                  There was an error submitting your form. Please try again or call us directly.
+                </span>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label" data-en="Full Name *" data-ja="氏名 *">Full Name *</label>
+                  <input type="text" class="form-control" id="fullName" name="fullName" required
+                         placeholder="Enter your full name">
+                  <div class="invalid-feedback" data-en="Please enter your full name." data-ja="氏名を入力してください。">
+                    Please enter your full name.
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="phoneNumber" class="form-label" data-en="Phone Number *" data-ja="電話番号 *">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required
+                         placeholder="e.g., +880 1XXX-XXXXXX">
+                  <div class="invalid-feedback" data-en="Please enter a valid phone number." data-ja="有効な電話番号を入力してください。">
+                    Please enter a valid phone number.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="emailAddress" class="form-label" data-en="Email Address *" data-ja="メールアドレス *">Email Address *</label>
+                  <input type="email" class="form-control" id="emailAddress" name="emailAddress" required
+                         placeholder="your.email@example.com">
+                  <div class="invalid-feedback" data-en="Please enter a valid email address." data-ja="有効なメールアドレスを入力してください。">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="interestedCourse" class="form-label" data-en="Interested Course" data-ja="興味のあるコース">Interested Course</label>
+                  <select class="form-select" id="interestedCourse" name="interestedCourse">
+                    <option value="" data-en="Select a course" data-ja="コースを選択">Select a course</option>
+                    <option value="n5" data-en="Japanese N5 (Beginner)" data-ja="日本語N5（初心者）">Japanese N5 (Beginner)</option>
+                    <option value="n4" data-en="Japanese N4 (Intermediate)" data-ja="日本語N4（中級）">Japanese N4 (Intermediate)</option>
+                    <option value="both" data-en="Both N5 & N4" data-ja="N5とN4両方">Both N5 & N4</option>
+                    <option value="jft" data-en="JFT Basic Test" data-ja="JFT基礎テスト">JFT Basic Test</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-12">
+                  <label for="messageSubject" class="form-label" data-en="Subject *" data-ja="件名 *">Subject *</label>
+                  <input type="text" class="form-control" id="messageSubject" name="messageSubject" required
+                         placeholder="Brief description of your inquiry">
+                  <div class="invalid-feedback" data-en="Please enter a subject for your message." data-ja="メッセージの件名を入力してください。">
+                    Please enter a subject for your message.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-12">
+                  <label for="messageContent" class="form-label" data-en="Your Message *" data-ja="メッセージ *">Your Message *</label>
+                  <textarea class="form-control" id="messageContent" name="messageContent" rows="6" required
+                            placeholder="Please describe your inquiry in detail. Include any specific questions about courses, fees, visa process, or consultation."></textarea>
+                  <div class="invalid-feedback" data-en="Please enter your message." data-ja="メッセージを入力してください。">
+                    Please enter your message.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row mt-3">
+                <div class="col-12">
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="privacyConsent" name="privacyConsent" required>
+                    <label class="form-check-label small" for="privacyConsent">
+                      <span data-en="I agree to the privacy policy and consent to Excel Education contacting me regarding my inquiry."
+                            data-ja="プライバシーポリシーに同意し、エクセル教育がお問い合わせに関する連絡をすることに同意します。">
+                        I agree to the privacy policy and consent to Excel Education contacting me regarding my inquiry.
+                      </span>
+                    </label>
+                    <div class="invalid-feedback" data-en="You must agree to the privacy policy before submitting." 
+                          data-ja="送信する前にプライバシーポリシーに同意する必要があります。">
+                      You must agree to the privacy policy before submitting.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary px-5 py-3">
+                <i class="fas fa-paper-plane me-2"></i>
+                <span data-en="Send Message" data-ja="メッセージを送信">Send Message</span>
+              </button>
+              
+              <p class="text-tertiary small mt-3">
+                <i class="fas fa-info-circle me-2"></i>
+                <span data-en="For urgent inquiries, please call our hotline directly for immediate assistance."
+                      data-ja="緊急のお問い合わせの場合は、直接ホットラインにお電話ください。">
+                  For urgent inquiries, please call our hotline directly for immediate assistance.
+                </span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Find Our Office" data-ja="オフィスを探す">Find Our Office</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Visit our main office in Jatrabari, conveniently located with easy access from major parts of Dhaka."
+             data-ja="ダッカの主要地域から簡単にアクセスできる便利な場所にあるジャトラバリの本社をお訪ねください。">
+            Visit our main office in Jatrabari, conveniently located with easy access from major parts of Dhaka.
+          </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-10 mx-auto animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="map-container">
+            <!-- Embedded Google Map -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.534770696789!2d90.43438547510558!3d23.733130978685374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9c74e77771b%3A0x802bf1316d3cf751!2sJatrabari%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1678912345678!5m2!1sen!2sbd" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Excel Education & Training Center Location - Jatrabari, Dhaka">
+            </iframe>
+          </div>
+          
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <div class="p-3 rounded-3" style="background-color: rgba(22, 163, 74, 0.05);">
+                <h5 class="fw-bold mb-2" data-en="Main Office" data-ja="本社">Main Office</h5>
+                <p class="mb-2">Kajla, Jatrabari, Dhaka, Bangladesh</p>
+                <p class="text-tertiary small mb-0">
+                  <i class="fas fa-clock me-1"></i>
+                  <span data-en="Sat-Thu: 10:00 AM – 6:00 PM" data-ja="土〜木: 午前10時 – 午後6時">Sat-Thu: 10:00 AM – 6:00 PM</span>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 rounded-3" style="background-color: rgba(22, 163, 74, 0.05);">
+                <h5 class="fw-bold mb-2" data-en="Branch Office" data-ja="支店">Branch Office</h5>
+                <p class="mb-2">Indira Road, Tejgaon, Dhaka 1215</p>
+                <p class="text-tertiary small mb-0">
+                  <i class="fas fa-clock me-1"></i>
+                  <span data-en="Sat-Thu: 10:00 AM – 6:00 PM" data-ja="土〜木: 午前10時 – 午後6時">Sat-Thu: 10:00 AM – 6:00 PM</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2 class="cta-title" data-en="Start Your Japanese Journey Today" data-ja="今日から日本語の旅を始めましょう">Start Your Japanese Journey Today</h2>
+        <p class="cta-subtitle" 
+           data-en="Contact Excel Education now for professional Japanese language training and expert visa guidance."
+           data-ja="プロの日本語研修と専門家のビザガイダンスのために、今すぐエクセル教育にご連絡ください。">
+          Contact Excel Education now for professional Japanese language training and expert visa guidance.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="tel:+8801974142455" class="btn btn-light px-5 py-3">
+            <i class="fas fa-phone me-2"></i>
+            <span data-en="Call Hotline Now" data-ja="今すぐホットラインにお電話">Call Hotline Now</span>
+          </a>
+          <a href="#contact-form" class="btn btn-outline-light px-5 py-3">
+            <i class="fas fa-envelope me-2"></i>
+            <span data-en="Send a Message" data-ja="メッセージを送信">Send a Message</span>
+          </a>
+        </div>
+
+        <p class="mt-4 opacity-75">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          <span data-en="Visit us: Kajla, Jatrabari, Dhaka | Panthapath, Dhaka-1205"
+                data-ja="お越しください：カジュラ、ジャトラバリ、ダッカ | パンタパス、ダッカ-1205">
+            Visit us: Kajla, Jatrabari, Dhaka | Panthapath, Dhaka-1205
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+          </div>
+          <p class="footer-description" 
+             data-en="Excel Education & Training Center is a premier Japanese language institute in Dhaka, offering intensive N5/N4 courses and Japan student visa guidance through structured offline classroom training in a disciplined, focused environment."
+             data-ja="エクセル教育トレーニングセンターはダッカの主要な日本語学校で、規律ある集中環境での体系的な対面教室研修を通じて、集中的なN5/N4コースと日本学生ビザガイダンスを提供しています。">
+            Excel Education & Training Center is a premier Japanese language institute in Dhaka,
+            offering intensive N5/N4 courses and Japan student visa guidance through structured
+            offline classroom training in a disciplined, focused environment.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="courses.html" class="footer-link" data-en="Courses" data-ja="コース">Courses</a>
+          <a href="why-japan.html" class="footer-link" data-en="Why Japan" data-ja="日本について">Why Japan</a>
+          <a href="process.html" class="footer-link" data-en="Our Process" data-ja="プロセス">Our Process</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="testimonials.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#gallery" class="footer-link" data-en="Photo Gallery" data-ja="フォトギャラリー">Photo Gallery</a>
+          <a href="#faq" class="footer-link" data-en="FAQ" data-ja="よくある質問">FAQ</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Our Courses" data-ja="コース一覧">Our Courses</h5>
+          <a href="courses.html#n5" class="footer-link" data-en="Japanese N5 (Beginner)" data-ja="日本語N5 (初心者)">Japanese N5 (Beginner)</a>
+          <a href="courses.html#n4" class="footer-link" data-en="Japanese N4 (Intermediate)" data-ja="日本語N4 (中級)">Japanese N4 (Intermediate)</a>
+          <a href="courses.html#batch" class="footer-link" data-en="Batch Schedule" data-ja="バッチスケジュール">Batch Schedule</a>
+          <a href="courses.html#fees" class="footer-link" data-en="Fee Structure" data-ja="料金体系">Fee Structure</a>
+          <a href="courses.html#materials" class="footer-link" data-en="Study Materials" data-ja="学習教材">Study Materials</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Address" data-ja="住所">Address</div>
+                <div class="text-tertiary">Kajla, Jatrabari, Dhaka, Bangladesh</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone" data-ja="電話">Phone</div>
+                <a href="tel:+880XXXXXXXXXX" class="footer-link">+880 1745-715127</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Excel Education & Training Center. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エクセル教育トレーニングセンター。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Excel Education & Training Center. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Contact Form JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Form validation and submission
+      const contactForm = document.getElementById('contactForm');
+      const formSuccess = document.getElementById('formSuccess');
+      const formError = document.getElementById('formError');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          
+          // Hide previous messages
+          formSuccess.classList.add('d-none');
+          formError.classList.add('d-none');
+          
+          // Check form validity
+          if (!contactForm.checkValidity()) {
+            // Mark invalid fields
+            const invalidFields = contactForm.querySelectorAll(':invalid');
+            invalidFields.forEach(field => {
+              field.classList.add('is-invalid');
+            });
+            
+            // Scroll to first invalid field
+            const firstInvalid = invalidFields[0];
+            if (firstInvalid) {
+              firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              firstInvalid.focus();
+            }
+            
+            return;
+          }
+          
+          // Form is valid - show success message
+          contactForm.classList.add('was-validated');
+          formSuccess.classList.remove('d-none');
+          
+          // Scroll to success message
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // In a real implementation, you would send the form data to a server here
+          console.log('Form submitted with data:', {
+            name: document.getElementById('fullName').value,
+            phone: document.getElementById('phoneNumber').value,
+            email: document.getElementById('emailAddress').value,
+            course: document.getElementById('interestedCourse').value,
+            subject: document.getElementById('messageSubject').value,
+            message: document.getElementById('messageContent').value
+          });
+          
+          // Reset form after 5 seconds
+          setTimeout(() => {
+            contactForm.reset();
+            contactForm.classList.remove('was-validated');
+            // Remove invalid styling from all fields
+            const allFields = contactForm.querySelectorAll('.form-control, .form-select, .form-check-input');
+            allFields.forEach(field => {
+              field.classList.remove('is-invalid');
+            });
+          }, 5000);
+        });
+        
+        // Real-time validation for fields
+        const formFields = contactForm.querySelectorAll('.form-control, .form-select, .form-check-input');
+        formFields.forEach(field => {
+          field.addEventListener('input', function() {
+            if (this.checkValidity()) {
+              this.classList.remove('is-invalid');
+            }
+          });
+          
+          // For checkboxes
+          if (field.type === 'checkbox') {
+            field.addEventListener('change', function() {
+              if (this.checkValidity()) {
+                this.classList.remove('is-invalid');
+              }
+            });
+          }
+        });
+      }
+      
+      // Update current year in footer
+      const yearElement = document.getElementById('currentYear');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>

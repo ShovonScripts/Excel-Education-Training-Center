@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why Japan | Excel Education & Training Center</title>
+  <meta name="description" content="Discover why Japan is the ideal destination for international students - quality education, career opportunities, safe society, and cultural richness." />
+  <meta name="theme-color" content="#166534" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Page-specific CSS -->
+  <style>
+    /* ===== HERO SECTION ===== */
+    #why-japan-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding-top: calc(var(--marquee-height) + var(--navbar-height));
+      background: linear-gradient(135deg, 
+        rgba(22, 163, 74, 0.03) 0%, 
+        rgba(22, 163, 74, 0.08) 100%),
+        var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #why-japan-hero::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--primary-300) 0%, transparent 70%);
+      opacity: 0.15;
+      top: -250px;
+      right: -150px;
+      z-index: 0;
+    }
+
+    #why-japan-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #why-japan-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--primary-200);
+    }
+
+    #why-japan-hero .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary-500);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    #why-japan-hero h1.display-1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    #why-japan-hero .hero-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== REASON CARDS SECTION ===== */
+    .reason-section {
+      padding: 80px 0;
+      background: var(--bg-primary);
+    }
+
+    .reason-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      height: 100%;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--primary-600);
+    }
+
+    .reason-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-300);
+    }
+
+    .reason-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 20px rgba(22, 163, 74, 0.2);
+    }
+
+    .reason-card h4 {
+      color: var(--primary-600);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .reason-card p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ===== JAPAN IN NUMBERS SECTION ===== */
+    #stats {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    #stats::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+    
+    #stats .section-title,
+    #stats .section-subtitle {
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+    
+    #stats .stat-number-large {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: white;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    #stats .stat-label-large {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    #stats .text-tertiary {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    #stats .btn-primary {
+      background: white;
+      color: var(--primary-700);
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    #stats .btn-primary:hover {
+      background: var(--neutral-100);
+      color: var(--primary-800);
+      transform: translateY(-2px);
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .comparison-section {
+      padding: 80px 0;
+      background: var(--bg-primary);
+    }
+
+    .comparison-table {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .comparison-header {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .comparison-row {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .comparison-row:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-cell {
+      flex: 1;
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .comparison-row:first-child .comparison-cell {
+      justify-content: flex-start;
+      font-weight: 700;
+      background: var(--bg-secondary);
+    }
+
+    .comparison-row .comparison-cell:first-child {
+      justify-content: flex-start;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+    }
+
+    .comparison-cell.check {
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    .comparison-cell.cross {
+      color: var(--error);
+      font-weight: 600;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section {
+      padding: 80px 0;
+      background: var(--bg-secondary);
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      #why-japan-hero h1.display-1 {
+        font-size: 2.5rem;
+      }
+      
+      #why-japan-hero .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .reason-section,
+      #stats,
+      .comparison-section,
+      .faq-section {
+        padding: 60px 0;
+      }
+      
+      #stats .stat-number-large {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #why-japan-hero {
+        min-height: 50vh;
+        padding-top: calc(var(--marquee-height) + 80px);
+      }
+      
+      #why-japan-hero h1.display-1 {
+        font-size: 2rem;
+      }
+      
+      #stats .stat-number-large {
+        font-size: 2.5rem;
+      }
+      
+      .comparison-row {
+        flex-direction: column;
+      }
+      
+      .comparison-cell {
+        justify-content: flex-start;
+        border-bottom: 1px solid var(--border-color);
+      }
+      
+      .comparison-row:last-child .comparison-cell:last-child {
+        border-bottom: none;
+      }
+      
+      .comparison-row:first-child .comparison-cell,
+      .comparison-row .comparison-cell:first-child {
+        background: var(--bg-surface);
+        font-weight: 700;
+        color: var(--primary-600);
+      }
+    }
+
+    @media (max-width: 576px) {
+      #why-japan-hero h1.display-1 {
+        font-size: 1.8rem;
+      }
+      
+      #why-japan-hero .d-flex.flex-wrap .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .reason-card {
+        padding: 1.5rem;
+      }
+      
+      .reason-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+      }
+      
+      #stats .stat-number-large {
+        font-size: 2rem;
+      }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* ===== DARK MODE ADJUSTMENTS ===== */
+    [data-theme="dark"] #why-japan-hero .hero-badge {
+      background: rgba(86, 239, 172, 0.1);
+      color: var(--primary-300);
+      border-color: rgba(86, 239, 172, 0.2);
+    }
+
+    [data-theme="dark"] .reason-card,
+    [data-theme="dark"] .comparison-table {
+      background: var(--bg-surface);
+      border-color: var(--border-color);
+    }
+
+    [data-theme="dark"] .comparison-row:first-child .comparison-cell,
+    [data-theme="dark"] .comparison-row .comparison-cell:first-child {
+      background: var(--bg-surface);
+    }
+    
+    [data-theme="dark"] #stats {
+      background: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-800) 100%);
+    }
+    
+    [data-theme="dark"] #stats .btn-primary:hover {
+      background: var(--neutral-200);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Excel Education Announcement">
+    <a href="contact.html" title="Start Your Japanese Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation - UPDATED to match Process page -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Excel Education Home">
+        <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html" data-en="Courses" data-ja="コース">Courses</a></li>
+          <li class="nav-item"><a class="nav-link active" href="why-japan.html" data-en="Why Japan" data-ja="日本について">Why Japan</a></li>
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Our Process" data-ja="プロセス">Our Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html" data-en="Success Stories" data-ja="成功事例">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="contact.html" class="nav-highlight" data-en="Enroll Now" data-ja="申し込む">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section - FIXED with same styling as contact page -->
+  <section class="hero" id="why-japan-hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <!-- This is the badge that's now perfectly centered like contact page -->
+          <div class="hero-badge animate-on-scroll" data-en="Your Gateway to Opportunities" data-ja="機会へのゲートウェイ">
+            <span class="dot"></span>
+            <span>Your Gateway to Opportunities</span>
+          </div>
+
+          <h1 class="display-1 mb-4 animate-on-scroll">
+            <span data-en="Why Study in <span class='text-gradient'>Japan</span>?" 
+                  data-ja="なぜ<span class='text-gradient'>日本</span>で学ぶのか？">Why Study in <span class="text-gradient">Japan</span>?</span>
+          </h1>
+
+          <p class="hero-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Japan offers unparalleled opportunities for international students seeking quality education, career growth, and personal development in a safe, disciplined, and technologically advanced society."
+             data-ja="日本は、安全で規律ある技術先進社会において、質の高い教育、キャリア成長、個人成長を求める留学生に比類のない機会を提供します。">
+            Japan offers unparalleled opportunities for international students seeking quality education, 
+            career growth, and personal development in a safe, disciplined, and technologically advanced society.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center mb-4 animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="#benefits" class="btn btn-primary">
+              <i class="fas fa-star me-2"></i> <span data-en="Key Benefits" data-ja="主な利点">Key Benefits</span>
+            </a>
+            <a href="#stats" class="btn btn-secondary">
+              <i class="fas fa-chart-line me-2"></i> <span data-en="Japan in Numbers" data-ja="数字で見る日本">Japan in Numbers</span>
+            </a>
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fas fa-calendar-check me-2"></i> <span data-en="Start Your Journey" data-ja="旅を始める">Start Your Journey</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="reason-section" id="benefits">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Key Benefits of Studying in Japan" data-ja="日本留学の主な利点">
+            Key Benefits of Studying in Japan
+          </h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Japan combines world-class education with unique cultural experiences, career opportunities, and a high quality of life. Discover why Japan is the ideal destination for Bangladeshi students."
+             data-ja="日本は世界クラスの教育とユニークな文化体験、キャリア機会、高い生活の質を組み合わせています。なぜ日本がバングラデシュ人学生にとって理想的な目的地なのかを発見してください。">
+            Japan combines world-class education with unique cultural experiences, career opportunities, and a high quality of life. 
+            Discover why Japan is the ideal destination for Bangladeshi students.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="reason-card">
+            <div class="reason-icon">
+              <i class="bi bi-award"></i>
+            </div>
+            <h4 data-en="World-Class Education" data-ja="世界クラスの教育">World-Class Education</h4>
+            <p data-en="Japan's universities consistently rank among the world's best, with cutting-edge research facilities, experienced faculty, and globally recognized degrees emphasizing practical skills."
+               data-ja="日本の大学は最先端の研究施設、経験豊富な教員、実践的スキルを重視した世界的に認められた学位を持ち、常に世界最高水準にランクされています。">
+              Japan's universities consistently rank among the world's best, with cutting-edge research facilities, experienced faculty, and globally recognized degrees emphasizing practical skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="reason-card">
+            <div class="reason-icon">
+              <i class="bi bi-cash-coin"></i>
+            </div>
+            <h4 data-en="Affordable Study Path" data-ja="手頃な留学費用">Affordable Study Path</h4>
+            <p data-en="Compared to Western countries, Japan offers high-quality education at reasonable tuition fees with numerous scholarship opportunities and lower living costs."
+               data-ja="欧米諸国と比較して、日本は手頃な授業料で高品質な教育を提供し、多数の奨学金機会と低い生活費を提供します。">
+              Compared to Western countries, Japan offers high-quality education at reasonable tuition fees with numerous scholarship opportunities and lower living costs.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="reason-card">
+            <div class="reason-icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <h4 data-en="Legal Part-Time Work" data-ja="合法的なアルバイト">Legal Part-Time Work</h4>
+            <p data-en="International students can work up to 28 hours per week legally during studies and 40 hours during vacations, helping manage living expenses while gaining valuable work experience."
+               data-ja="留学生は学期中は週28時間まで、休暇中は週40時間まで合法的に働くことができ、貴重な仕事経験を積みながら生活費を管理するのに役立ちます。">
+              International students can work up to 28 hours per week legally during studies and 40 hours during vacations, helping manage living expenses while gaining valuable work experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="reason-card">
+            <div class="reason-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h4 data-en="Strong Career Opportunities" data-ja="充実した就職機会">Strong Career Opportunities</h4>
+            <p data-en="Japan's growing economy and aging population create high demand for skilled professionals, offering excellent employment prospects and competitive salaries for graduates."
+               data-ja="日本の成長経済と高齢化社会は熟練専門家への高い需要を生み出し、卒業生に優れた雇用見通しと競争力のある給与を提供します。">
+              Japan's growing economy and aging population create high demand for skilled professionals, offering excellent employment prospects and competitive salaries for graduates.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="reason-card">
+            <div class="reason-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h4 data-en="Safe & Disciplined Society" data-ja="安全で規律ある社会">Safe & Disciplined Society</h4>
+            <p data-en="Japan is globally recognized as one of the safest countries with low crime rates, cleanliness, respect for rules, and strong social order - ideal for international students."
+               data-ja="日本は低犯罪率、清潔さ、規則尊重、強い社会秩序で世界的に最も安全な国の一つとして認められており、留学生に理想的です。">
+              Japan is globally recognized as one of the safest countries with low crime rates, cleanliness, respect for rules, and strong social order - ideal for international students.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="reason-card">
+            <div class="reason-icon">
+              <i class="bi bi-translate"></i>
+            </div>
+            <h4 data-en="Cultural & Technological Hub" data-ja="文化と技術のハブ">Cultural & Technological Hub</h4>
+            <p data-en="Experience the perfect blend of ancient traditions and cutting-edge technology, from historic temples to robotics, anime to traditional arts - a unique learning environment."
+               data-ja="歴史的な寺院からロボティクス、アニメから伝統芸術まで、古代の伝統と最先端技術の完璧な融合を体験できるユニークな学習環境です。">
+              Experience the perfect blend of ancient traditions and cutting-edge technology, from historic temples to robotics, anime to traditional arts - a unique learning environment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Japan in Numbers Section -->
+  <section id="stats">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Japan in Numbers" data-ja="数字で見る日本">Japan in Numbers</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Discover the impressive statistics that make Japan a top destination for international students worldwide."
+             data-ja="日本が世界中の留学生にとってトップの目的地となっている印象的な統計データをご覧ください。">
+            Discover the impressive statistics that make Japan a top destination for international students worldwide.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 col-6 mb-4 mb-md-0 animate-on-scroll">
+          <div class="text-center">
+            <div class="stat-number-large" data-count="300" data-suffix="K+">0K+</div>
+            <div class="stat-label-large" data-en="International Students" data-ja="留学生数">International Students</div>
+            <p class="small mt-2 text-tertiary" data-en="Studying across Japan" data-ja="日本全国で学ぶ">Studying across Japan</p>
+          </div>
+        </div>
+        
+        <div class="col-md-3 col-6 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="text-center">
+            <div class="stat-number-large" data-count="95" data-suffix="%">0%</div>
+            <div class="stat-label-large" data-en="Employment Rate" data-ja="就職率">Employment Rate</div>
+            <p class="small mt-2 text-tertiary" data-en="For university graduates" data-ja="大学卒業生の">For university graduates</p>
+          </div>
+        </div>
+        
+        <div class="col-md-3 col-6 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="text-center">
+            <div class="stat-number-large">#1</div>
+            <div class="stat-label-large" data-en="Safest in Asia" data-ja="アジア最安全国">Safest in Asia</div>
+            <p class="small mt-2 text-tertiary" data-en="Global Peace Index" data-ja="世界平和指数">Global Peace Index</p>
+          </div>
+        </div>
+        
+        <div class="col-md-3 col-6 animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="text-center">
+            <div class="stat-number-large">¥1000/hr</div>
+            <div class="stat-label-large" data-en="Minimum Wage" data-ja="最低賃金">Minimum Wage</div>
+            <p class="small mt-2 text-tertiary" data-en="Part-time work in Tokyo" data-ja="東京でのアルバイト">Part-time work in Tokyo</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          <div class="row g-4">
+            <div class="col-md-4 animate-on-scroll">
+              <div class="text-center">
+                <div class="stat-number-large">86%</div>
+                <div class="stat-label-large" data-en="Student Satisfaction" data-ja="学生満足度">Student Satisfaction</div>
+                <p class="small mt-2 text-tertiary" data-en="Quality of education" data-ja="教育の質">Quality of education</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 animate-on-scroll" style="transition-delay: 120ms;">
+              <div class="text-center">
+                <div class="stat-number-large" data-count="5" data-suffix=" Years">0 Years</div>
+                <div class="stat-label-large" data-en="Post-Study Work" data-ja="卒業後就労">Post-Study Work</div>
+                <p class="small mt-2 text-tertiary" data-en="Visa duration" data-ja="ビザ期間">Visa duration</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 animate-on-scroll" style="transition-delay: 240ms;">
+              <div class="text-center">
+                <div class="stat-number-large" data-count="800" data-suffix="+">0+</div>
+                <div class="stat-label-large" data-en="Universities" data-ja="大学数">Universities</div>
+                <p class="small mt-2 text-tertiary" data-en="Higher education institutions" data-ja="高等教育機関">Higher education institutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 480ms;">
+        <a href="#comparison" class="btn btn-primary px-4 py-3">
+          <i class="fas fa-chart-bar me-2"></i> <span data-en="Compare with Other Countries" data-ja="他国と比較する">Compare with Other Countries</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Country Comparison" data-ja="国別比較">Country Comparison</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="See how Japan compares to other popular study destinations in terms of cost, opportunities, and quality of life."
+             data-ja="費用、機会、生活の質の面で、日本が他の人気留学先とどのように比較されるかを見てください。">
+            See how Japan compares to other popular study destinations in terms of cost, opportunities, and quality of life.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto animate-on-scroll">
+          <div class="comparison-table">
+            <div class="comparison-header">
+              <h4 class="mb-0" data-en="Study Destination Comparison" data-ja="留学先比較">Study Destination Comparison</h4>
+            </div>
+            
+            <div class="comparison-row">
+              <div class="comparison-cell" data-en="Destination" data-ja="留学先">Destination</div>
+              <div class="comparison-cell" data-en="Japan" data-ja="日本">Japan</div>
+              <div class="comparison-cell" data-en="USA" data-ja="アメリカ">USA</div>
+              <div class="comparison-cell" data-en="UK" data-ja="イギリス">UK</div>
+              <div class="comparison-cell" data-en="Australia" data-ja="オーストラリア">Australia</div>
+            </div>
+            
+            <div class="comparison-row">
+              <div class="comparison-cell" data-en="Annual Tuition Fees (Avg)" data-ja="年間授業料（平均）">Annual Tuition Fees (Avg)</div>
+              <div class="comparison-cell check" data-en="$5,000 - $10,000" data-ja="5,000〜10,000ドル">$5,000 - $10,000</div>
+              <div class="comparison-cell" data-en="$20,000 - $50,000" data-ja="20,000〜50,000ドル">$20,000 - $50,000</div>
+              <div class="comparison-cell" data-en="$15,000 - $30,000" data-ja="15,000〜30,000ドル">$15,000 - $30,000</div>
+              <div class="comparison-cell" data-en="$20,000 - $35,000" data-ja="20,000〜35,000ドル">$20,000 - $35,000</div>
+            </div>
+            
+            <div class="comparison-row">
+              <div class="comparison-cell" data-en="Living Cost (Monthly)" data-ja="生活費（月額）">Living Cost (Monthly)</div>
+              <div class="comparison-cell check" data-en="$700 - $1,200" data-ja="700〜1,200ドル">$700 - $1,200</div>
+              <div class="comparison-cell" data-en="$1,200 - $2,500" data-ja="1,200〜2,500ドル">$1,200 - $2,500</div>
+              <div class="comparison-cell" data-en="$1,000 - $2,000" data-ja="1,000〜2,000ドル">$1,000 - $2,000</div>
+              <div class="comparison-cell" data-en="$1,200 - $2,200" data-ja="1,200〜2,200ドル">$1,200 - $2,200</div>
+            </div>
+            
+            <div class="comparison-row">
+              <div class="comparison-cell" data-en="Part-time Work Allowed" data-ja="アルバイト許可">Part-time Work Allowed</div>
+              <div class="comparison-cell check" data-en="28 hrs/week" data-ja="週28時間">28 hrs/week</div>
+              <div class="comparison-cell" data-en="20 hrs/week" data-ja="週20時間">20 hrs/week</div>
+              <div class="comparison-cell" data-en="20 hrs/week" data-ja="週20時間">20 hrs/week</div>
+              <div class="comparison-cell" data-en="40 hrs/fortnight" data-ja="週40時間">40 hrs/fortnight</div>
+            </div>
+            
+            <div class="comparison-row">
+              <div class="comparison-cell" data-en="Post-Study Work Visa" data-ja="卒業後就労ビザ">Post-Study Work Visa</div>
+              <div class="comparison-cell check" data-en="Up to 5 years" data-ja="最大5年">Up to 5 years</div>
+              <div class="comparison-cell" data-en="1-3 years" data-ja="1-3年">1-3 years</div>
+              <div class="comparison-cell" data-en="2 years" data-ja="2年">2 years</div>
+              <div class="comparison-cell" data-en="2-4 years" data-ja="2-4年">2-4 years</div>
+            </div>
+            
+            <div class="comparison-row">
+              <div class="comparison-cell" data-en="Safety Ranking" data-ja="安全ランキング">Safety Ranking</div>
+              <div class="comparison-cell check" data-en="#1 in Asia" data-ja="アジア1位">#1 in Asia</div>
+              <div class="comparison-cell" data-en="#128 globally" data-ja="世界128位">#128 globally</div>
+              <div class="comparison-cell" data-en="#42 globally" data-ja="世界42位">#42 globally</div>
+              <div class="comparison-cell" data-en="#13 globally" data-ja="世界13位">#13 globally</div>
+            </div>
+          </div>
+          
+          <div class="mt-4 text-center">
+            <p class="text-tertiary" data-en="*Based on 2024 data from various international education sources" 
+               data-ja="*2024年の各種国際教育ソースのデータに基づく">
+              *Based on 2024 data from various international education sources
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="FAQs About Japan" data-ja="日本に関するFAQ">FAQs About Japan</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Common questions answered about studying, living, and working in Japan as an international student."
+             data-ja="留学生として日本で学び、生活し、働くことに関するよくある質問にお答えします。">
+            Common questions answered about studying, living, and working in Japan as an international student.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="accordion" id="japanFaqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item animate-on-scroll">
+              <h3 class="accordion-header" id="japanFaqHeading1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#japanFaqCollapse1" aria-expanded="false" aria-controls="japanFaqCollapse1">
+                  <span data-en="Is Japanese language proficiency mandatory for studying in Japan?" data-ja="日本留学に日本語能力は必須ですか？">
+                    Is Japanese language proficiency mandatory for studying in Japan?
+                  </span>
+                </button>
+              </h3>
+              <div id="japanFaqCollapse1" class="accordion-collapse collapse" aria-labelledby="japanFaqHeading1" data-bs-parent="#japanFaqAccordion">
+                <div class="accordion-body">
+                  <p data-en="Yes, Japanese language proficiency is essential for most programs. For Japanese language schools, you need at least JLPT N5 or equivalent. For universities, requirements vary but most require JLPT N2 or higher for degree programs. That's why we provide intensive Japanese language training to prepare you for success."
+                     data-ja="はい、ほとんどのプログラムで日本語能力が不可欠です。日本語学校には少なくともJLPT N5または同等が必要です。大学では要件は異なりますが、学位プログラムのほとんどはJLPT N2以上を要求します。そのため、私たちは成功のための集中的な日本語研修を提供しています。">
+                    Yes, Japanese language proficiency is essential for most programs. For Japanese language schools, you need at least JLPT N5 or equivalent. 
+                    For universities, requirements vary but most require JLPT N2 or higher for degree programs. That's why we provide intensive Japanese language training to prepare you for success.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item animate-on-scroll" style="transition-delay: 120ms;">
+              <h3 class="accordion-header" id="japanFaqHeading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#japanFaqCollapse2" aria-expanded="false" aria-controls="japanFaqCollapse2">
+                  <span data-en="Can I work while studying in Japan?" data-ja="日本で学びながら働けますか？">
+                    Can I work while studying in Japan?
+                  </span>
+                </button>
+              </h3>
+              <div id="japanFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="japanFaqHeading2" data-bs-parent="#japanFaqAccordion">
+                <div class="accordion-body">
+                  <p data-en="Yes, international students can work part-time up to 28 hours per week during study periods and up to 40 hours per week during vacations. Common part-time jobs include convenience stores, restaurants, tutoring, and retail. This helps cover living expenses and provides valuable work experience."
+                     data-ja="はい、留学生は学期中は週28時間まで、休暇中は週40時間までアルバイトが可能です。一般的なアルバイトにはコンビニ、レストラン、家庭教師、小売が含まれます。これは生活費をカバーし、貴重な仕事経験を提供するのに役立ちます。">
+                    Yes, international students can work part-time up to 28 hours per week during study periods and up to 40 hours per week during vacations. 
+                    Common part-time jobs include convenience stores, restaurants, tutoring, and retail. This helps cover living expenses and provides valuable work experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item animate-on-scroll" style="transition-delay: 240ms;">
+              <h3 class="accordion-header" id="japanFaqHeading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#japanFaqCollapse3" aria-expanded="false" aria-controls="japanFaqCollapse3">
+                  <span data-en="What are the career prospects after studying in Japan?" data-ja="日本留学後のキャリア見通しはどうですか？">
+                    What are the career prospects after studying in Japan?
+                  </span>
+                </button>
+              </h3>
+              <div id="japanFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="japanFaqHeading3" data-bs-parent="#japanFaqAccordion">
+                <div class="accordion-body">
+                  <p data-en="Japan offers excellent career prospects with high employment rates for graduates. Key industries include technology, engineering, manufacturing, healthcare, tourism, and education. Japanese companies value international graduates with language skills and cultural understanding. Many students find employment in Japan or return to Bangladesh with valuable international experience."
+                     data-ja="日本は卒業生の高い就職率で優れたキャリア見通しを提供します。主要産業には技術、工学、製造、医療、観光、教育が含まれます。日本の企業は語学力と文化理解を持つ国際的な卒業生を高く評価します。多くの学生が日本で雇用を見つけるか、貴重な国際経験を持ってバングラデシュに戻ります。">
+                    Japan offers excellent career prospects with high employment rates for graduates. Key industries include technology, engineering, manufacturing, healthcare, tourism, and education. 
+                    Japanese companies value international graduates with language skills and cultural understanding. Many students find employment in Japan or return to Bangladesh with valuable international experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item animate-on-scroll" style="transition-delay: 360ms;">
+              <h3 class="accordion-header" id="japanFaqHeading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#japanFaqCollapse4" aria-expanded="false" aria-controls="japanFaqCollapse4">
+                  <span data-en="How safe is Japan for international students?" data-ja="留学生にとって日本はどのくらい安全ですか？">
+                    How safe is Japan for international students?
+                  </span>
+                </button>
+              </h3>
+              <div id="japanFaqCollapse4" class="accordion-collapse collapse" aria-labelledby="japanFaqHeading4" data-bs-parent="#japanFaqAccordion">
+                <div class="accordion-body">
+                  <p data-en="Japan is consistently ranked as one of the safest countries in the world. It has very low crime rates, efficient public services, and a strong sense of social responsibility. International students can feel secure walking alone at night, using public transportation, and living independently. The Japanese people are generally helpful and respectful toward foreigners."
+                     data-ja="日本は常に世界で最も安全な国の一つにランクされています。犯罪率は非常に低く、効率的な公共サービス、強い社会的責任感があります。留学生は夜一人で歩くこと、公共交通機関の利用、独立した生活を安全に感じることができます。日本人は一般的に外国人に対して親切で礼儀正しいです。">
+                    Japan is consistently ranked as one of the safest countries in the world. It has very low crime rates, efficient public services, and a strong sense of social responsibility. 
+                    International students can feel secure walking alone at night, using public transportation, and living independently. The Japanese people are generally helpful and respectful toward foreigners.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 480ms;">
+            <a href="contact.html" class="btn btn-primary px-5 py-3">
+              <i class="fas fa-question-circle me-2"></i> <span data-en="More Questions? Book Consultation" data-ja="さらに質問がありますか？相談を予約">More Questions? Book Consultation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2 class="cta-title" data-en="Ready to Begin Your Japanese Journey?" data-ja="日本語の旅を始める準備はできていますか？">Ready to Begin Your Japanese Journey?</h2>
+        <p class="cta-subtitle" 
+           data-en="Take the first step toward your future in Japan. Contact Excel Education today for expert guidance on Japanese language training and study visa processing."
+           data-ja="日本の未来に向けて最初の一歩を踏み出しましょう。日本語研修と留学ビザ処理に関する専門家のガイダンスのために、今日エクセル教育にご連絡ください。">
+          Take the first step toward your future in Japan. Contact Excel Education today for expert guidance on Japanese language training and study visa processing.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Free Consultation" data-ja="無料相談を予約">Book Free Consultation</span>
+          </a>
+          <a href="tel:+8801745715127" class="btn btn-outline-light px-5 py-3">
+            <i class="fas fa-phone me-2"></i> <span data-en="Call Now: +880 1745-715127" data-ja="今すぐ電話: +880 1745-715127">Call Now: +880 1745-715127</span>
+          </a>
+        </div>
+
+        <p class="mt-4 opacity-75">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          <span data-en="Location: Kajla, Jatrabari, Dhaka | Office Time: Sat-Thu, 10:00 AM – 6:00 PM"
+                data-ja="所在地: カジュラ、ジャトラバリ、ダッカ | 営業時間: 土〜木、午前10時 – 午後6時">
+            Location: Kajla, Jatrabari, Dhaka | Office Time: Sat-Thu, 10:00 AM – 6:00 PM
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Excel Education & Training Center Logo" class="brand-logo-img" />
+          </div>
+          <p class="footer-description" 
+             data-en="Excel Education & Training Center is a premier Japanese language institute in Dhaka, offering intensive N5/N4 courses and Japan student visa guidance through structured offline classroom training in a disciplined, focused environment."
+             data-ja="エクセル教育トレーニングセンターはダッカの主要な日本語学校で、規律ある集中環境での体系的な対面教室研修を通じて、集中的なN5/N4コースと日本学生ビザガイダンスを提供しています。">
+            Excel Education & Training Center is a premier Japanese language institute in Dhaka,
+            offering intensive N5/N4 courses and Japan student visa guidance through structured
+            offline classroom training in a disciplined, focused environment.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="courses.html" class="footer-link" data-en="Courses" data-ja="コース">Courses</a>
+          <a href="why-japan.html" class="footer-link" data-en="Why Japan" data-ja="日本について">Why Japan</a>
+          <a href="process.html" class="footer-link" data-en="Our Process" data-ja="プロセス">Our Process</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="testimonials.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#benefits" class="footer-link" data-en="Benefits of Japan" data-ja="日本の利点">Benefits of Japan</a>
+          <a href="#stats" class="footer-link" data-en="Japan in Numbers" data-ja="数字で見る日本">Japan in Numbers</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Why Japan Resources" data-ja="日本についてのリソース">Why Japan Resources</h5>
+          <a href="#benefits" class="footer-link" data-en="Key Benefits" data-ja="主な利点">Key Benefits</a>
+          <a href="#stats" class="footer-link" data-en="Japan in Numbers" data-ja="数字で見る日本">Japan in Numbers</a>
+          <a href="#comparison" class="footer-link" data-en="Country Comparison" data-ja="国別比較">Country Comparison</a>
+          <a href="#faq" class="footer-link" data-en="Japan FAQs" data-ja="日本FAQ">Japan FAQs</a>
+          <a href="courses.html" class="footer-link" data-en="Japanese Courses" data-ja="日本語コース">Japanese Courses</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Address" data-ja="住所">Address</div>
+                <div class="text-tertiary">Kajla, Jatrabari, Dhaka, Bangladesh</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone" data-ja="電話">Phone</div>
+                <a href="tel:+8801745715127" class="footer-link">+880 1745-715127</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Excel Education & Training Center. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エクセル教育トレーニングセンター。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Excel Education & Training Center. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Page-specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize current year in footer
+      const yearElement = document.getElementById('currentYear');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+      
+      // Initialize counting animation for Japan in Numbers section
+      function initJapanStatsCounter() {
+        const statsSection = document.getElementById('stats');
+        if (!statsSection) return;
+        
+        const counters = statsSection.querySelectorAll('.stat-number-large[data-count]');
+        let countersStarted = false;
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !countersStarted) {
+              countersStarted = true;
+              animateJapanStats();
+            }
+          });
+        }, { threshold: 0.3 });
+        
+        observer.observe(statsSection);
+        
+        function animateJapanStats() {
+          const speed = 200;
+          
+          counters.forEach(counter => {
+            const target = Number(counter.getAttribute('data-count') || 0);
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const currentText = counter.textContent;
+            const current = Number(currentText.replace(/[^0-9]/g, '') || 0);
+            const increment = target / speed;
+            
+            if (current < target) {
+              const newValue = Math.ceil(current + increment);
+              counter.textContent = newValue + suffix;
+            } else {
+              counter.textContent = target + suffix;
+            }
+          });
+          
+          const stillCounting = [...counters].some(c => {
+            const t = Number(c.getAttribute('data-count') || 0);
+            const v = Number(c.textContent.replace(/[^0-9]/g, '') || 0);
+            return v < t;
+          });
+          
+          if (stillCounting) {
+            requestAnimationFrame(animateJapanStats);
+          }
+        }
+      }
+      
+      // Add responsive behavior for comparison table
+      function handleComparisonTableResponsive() {
+        const comparisonTable = document.querySelector('.comparison-table');
+        if (!comparisonTable) return;
+        
+        const isMobile = window.innerWidth <= 768;
+        const rows = comparisonTable.querySelectorAll('.comparison-row');
+        
+        if (isMobile) {
+          // Convert to stacked layout on mobile
+          rows.forEach(row => {
+            const cells = row.querySelectorAll('.comparison-cell');
+            cells.forEach((cell, index) => {
+              if (index === 0) {
+                cell.style.cssText = `
+                  justify-content: flex-start;
+                  font-weight: 700;
+                  background: var(--bg-surface);
+                  color: var(--primary-600);
+                  border-bottom: 1px solid var(--border-color);
+                `;
+              } else {
+                const header = rows[0].querySelectorAll('.comparison-cell')[index];
+                const headerText = header ? header.textContent : '';
+                const originalCell = cell.cloneNode(true);
+                
+                // Create new row structure
+                const newRow = document.createElement('div');
+                newRow.className = 'comparison-row-mobile';
+                newRow.style.cssText = `
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 0.75rem 1rem;
+                  border-bottom: 1px solid var(--border-color);
+                  background: ${index % 2 === 0 ? 'var(--bg-secondary)' : 'var(--bg-surface)'};
+                `;
+                
+                const labelCell = document.createElement('div');
+                labelCell.textContent = headerText;
+                labelCell.style.cssText = `
+                  font-weight: 600;
+                  color: var(--text-primary);
+                  flex: 1;
+                `;
+                
+                const valueCell = document.createElement('div');
+                valueCell.innerHTML = originalCell.innerHTML;
+                valueCell.style.cssText = `
+                  flex: 1;
+                  text-align: right;
+                  ${cell.classList.contains('check') ? 'color: var(--success); font-weight: 600;' : ''}
+                  ${cell.classList.contains('cross') ? 'color: var(--error); font-weight: 600;' : ''}
+                `;
+                
+                newRow.appendChild(labelCell);
+                newRow.appendChild(valueCell);
+                
+                // Insert after the main label row
+                if (index === 1) {
+                  row.parentNode.insertBefore(newRow, row.nextSibling);
+                } else if (index > 1) {
+                  const previousNewRow = row.nextElementSibling;
+                  row.parentNode.insertBefore(newRow, previousNewRow ? previousNewRow.nextSibling : row.nextSibling);
+                }
+              }
+            });
+          });
+          
+          // Hide original rows (except first one)
+          rows.forEach((row, index) => {
+            if (index > 0) {
+              row.style.display = 'none';
+            }
+          });
+        } else {
+          // Restore original layout on desktop
+          rows.forEach(row => {
+            row.style.display = 'flex';
+            const cells = row.querySelectorAll('.comparison-cell');
+            cells.forEach((cell, cellIndex) => {
+              cell.style.cssText = '';
+              if (cellIndex === 0) {
+                cell.style.justifyContent = 'flex-start';
+                cell.style.fontWeight = '600';
+                cell.style.color = 'var(--text-primary)';
+                cell.style.background = 'var(--bg-secondary)';
+              } else {
+                cell.style.justifyContent = 'center';
+              }
+            });
+          });
+          
+          // Remove mobile rows
+          const mobileRows = comparisonTable.querySelectorAll('.comparison-row-mobile');
+          mobileRows.forEach(row => row.remove());
+        }
+      }
+      
+      // Initialize functions
+      initJapanStatsCounter();
+      handleComparisonTableResponsive();
+      window.addEventListener('resize', handleComparisonTableResponsive);
+    });
+  </script>
+</body>
+</html>
