@@ -849,31 +849,52 @@
           
           // Form is valid - show success message
           contactForm.classList.add('was-validated');
-          formSuccess.classList.remove('d-none');
           
-          // Scroll to success message
-          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          
-          // In a real implementation, you would send the form data to a server here
-          console.log('Form submitted with data:', {
-            name: document.getElementById('fullName').value,
-            phone: document.getElementById('phoneNumber').value,
-            email: document.getElementById('emailAddress').value,
-            course: document.getElementById('interestedCourse').value,
-            subject: document.getElementById('messageSubject').value,
-            message: document.getElementById('messageContent').value
+          // Show loading state on button
+          const submitBtn = contactForm.querySelector('button[type="submit"]');
+          const originalBtnText = submitBtn.innerHTML;
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending...';
+
+          // Prepare form data
+          const formData = new FormData(contactForm);
+
+          // Send data to PHP script
+          fetch('send_email.php', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.text())
+          .then(text => {
+            try {
+              return JSON.parse(text);
+            } catch (e) {
+              console.error('Server returned raw text instead of JSON:', text);
+              if (text.trim().startsWith('<?php')) {
+                throw new Error('PHP is not executing. Please access this page via http://localhost/excel/contact.html');
+              }
+              throw new Error('Server error. Check console for details.');
+            }
+          })
+          .then(data => {
+            if (data.success) {
+              // Redirect to thank you page on success
+              window.location.href = 'thank-you.html';
+            } else {
+              throw new Error(data.message || 'Form submission failed.');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            formError.classList.remove('d-none');
+            formError.querySelector('span').textContent = error.message || 'There was an error submitting your form. Please try again or call us directly.';
+            formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          })
+          .finally(() => {
+            // Restore button state
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
           });
-          
-          // Reset form after 5 seconds
-          setTimeout(() => {
-            contactForm.reset();
-            contactForm.classList.remove('was-validated');
-            // Remove invalid styling from all fields
-            const allFields = contactForm.querySelectorAll('.form-control, .form-select, .form-check-input');
-            allFields.forEach(field => {
-              field.classList.remove('is-invalid');
-            });
-          }, 5000);
         });
         
         // Real-time validation for fields
