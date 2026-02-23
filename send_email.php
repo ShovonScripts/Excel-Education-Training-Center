@@ -58,7 +58,7 @@ try {
     $mail->Host = 'mail.exceleducationcenter.com';  // Your SMTP server
     $mail->SMTPAuth = true;
     $mail->Username = 'info@exceleducationcenter.com';  // Your email
-    $mail->Password = 'Pele@246';     // Your password
+    $mail->Password = '--';     // Your password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Use SSL/TLS
     $mail->Port = 465;  // Your SMTP port
     
@@ -182,7 +182,7 @@ Website: exceleducationcenter.com
         $confirmationMail->Host = 'mail.exceleducationcenter.com';
         $confirmationMail->SMTPAuth = true;
         $confirmationMail->Username = 'info@exceleducationcenter.com';
-        $confirmationMail->Password = 'Pele@246';
+        $confirmationMail->Password = '--';
         $confirmationMail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $confirmationMail->Port = 465;
         $confirmationMail->CharSet = 'UTF-8';
